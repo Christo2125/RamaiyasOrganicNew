@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramaiah's | Sesame and Coconut Oil</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-green': '#2d4a22',
+                        'brand-light-green': '#e0eace',
+                        'brand-yellow': '#eefc55',
+                        'brand-bg': '#f4f4f0',
+                        'brand-dark': '#1a1a1a',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f4f4f0;
+            overflow-x: hidden;
+        }
+        
+        /* Hide scrollbar for clean horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blur-reveal {
+            opacity: 0;
+            filter: blur(10px);
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .blur-reveal.active {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0);
+        }
+
+        /* Custom Clip Path */
+        .mask-image-circle {
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        /* Parallax Classes */
+        .parallax-target {
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark">
+
+    <app-navbar></app-navbar>
+
+    <main>
+        <app-hero></app-hero>
+        <app-lifestyle></app-lifestyle>
+        <app-product></app-product>
+        <app-benefits></app-benefits>
+        <!-- <app-testimonials></app-testimonials>
+        <app-more-info></app-more-info> -->
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Components Scripts -->
+    <script src="components/Navbar.js"></script>
+    <script src="components/Hero.js"></script>
+    <script src="components/Manifesto.js"></script>
+    <script src="components/ProductSection.js"></script>
+    <script src="components/Benefits.js"></script>
+    <script src="components/Lifestyle.js"></script>
+    <script src="components/Testimonials.js"></script>
+    <script src="components/MoreInfo.js"></script>
+    <script src="components/Footer.js"></script>
+
+    <!-- Global Scripts -->
+    <script>
+        // Intersection Observer for Reveal Animations (observes elements inside components as they are added)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // We need to wait for components to render before observing
+        // Or simply observe document body mutations or just run roughly on load.
+        // Since custom elements render synchronously in connectedCallback in this setup, 
+        // we can observe after a small timeout or use a MutationObserver.
+        
+        // A simple approach: observe periodically or after load
+        window.addEventListener('load', () => {
+             // Initial check
+             document.querySelectorAll('.reveal, .blur-reveal').forEach(el => observer.observe(el));
+             
+             // Mutation Observer to watch for new nodes (in case of dynamic loading, though here it's mostly static)
+             const mutationObserver = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === 1) {
+                            if (node.matches('.reveal, .blur-reveal')) observer.observe(node);
+                             node.querySelectorAll('.reveal, .blur-reveal').forEach(el => observer.observe(el));
+                        }
+                    });
+                });
+             });
+             
+             mutationObserver.observe(document.body, { childList: true, subtree: true });
+        });
+    </script>
+</body>
+</html>
