@@ -17,7 +17,7 @@ class Hero extends HTMLElement {
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-left z-0 w-full pointer-events-none select-none">
                     <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiah's</span>
                     <h1 class="text-[16vw] leading-none font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
-                        Pure Oils.
+                        Pure Oils
                     </h1>
                 </div>
 

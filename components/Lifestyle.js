@@ -4,7 +4,7 @@ class Lifestyle extends HTMLElement {
         <section id="about" class="py-20 px-4 md:px-6 bg-gradient-to-b from-brand-bg to-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-6xl md:text-8xl font-serif font-bold text-brand-dark mb-4">Ramaiah's.</h2>
+                    <h2 class="text-6xl md:text-8xl font-serif font-bold text-brand-dark mb-4">Ramaiah's</h2>
                     <p class="text-gray-500 italic font-serif">Support your health with expert <br/> crafted pure oils</p>
                 </div>
 

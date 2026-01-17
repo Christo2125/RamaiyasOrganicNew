@@ -5,9 +5,9 @@ class Navbar extends HTMLElement {
             <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <div class="h-10 w-auto text-brand-green flex items-center justify-center">
+                    <a href="index.html" class="h-10 w-auto text-brand-green flex items-center justify-center">
                         <img src="./public/images/logo.jpg" alt="Ramaiah Organic Logo" class="h-40 w-auto object-contain rounded-lg pt-4">
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Desktop Links -->
