@@ -47,13 +47,13 @@ class About extends HTMLElement {
                     </div>
 
                     <div class="reveal bg-[#faf5eb] rounded-3xl p-8 relative overflow-hidden group h-[400px] flex flex-col justify-between md:col-span-2">
-                         <div class="max-w-md">
+                         <div class="max-w-md relative z-10">
                             <span class="bg-brand-yellow text-brand-dark text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Purity</span>
                             <h3 class="text-4xl font-serif font-bold text-brand-dark mt-4">100% Organic, <br/> 0% Compromise</h3>
                             <p class="text-gray-600 text-lg mt-4">Every drop is a testament to our commitment to your health and the environment.</p>
                         </div>
-                        <div class="absolute bottom-0 right-0 w-1/2 h-full">
-                            <img src="./public/images/leave.jpg" class="w-full h-full object-cover opacity-100" alt="Sustainable farming">
+                        <div class="absolute inset-0 w-full h-full md:w-1/2 md:left-auto md:right-0">
+                            <img src="./public/images/leave.jpg" class="w-full h-full object-cover opacity-70 md:opacity-100" alt="Sustainable farming">
                         </div>
                     </div>
                 </div>

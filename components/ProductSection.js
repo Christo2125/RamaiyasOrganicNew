@@ -81,6 +81,13 @@ class ProductSection extends HTMLElement {
                         <div class="absolute inset-0 bg-gradient-to-t from-green-200/50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
                 </div>
+
+                <div class="mt-12 text-center reveal">
+                    <a href="products.html" class="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors shadow-lg">
+                        Show More Products
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
         </section>
         `;

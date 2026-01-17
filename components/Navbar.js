@@ -13,7 +13,7 @@ class Navbar extends HTMLElement {
                 <!-- Desktop Links -->
                 <div class="hidden md:flex items-center gap-8">
                     <a href="index.html" class="text-gray-600 hover:text-brand-green font-medium transition-colors text-sm uppercase tracking-wide">Home</a>
-                    <a href="index.html#product-section" class="text-gray-600 hover:text-brand-green font-medium transition-colors text-sm uppercase tracking-wide">Products</a>
+                    <a href="products.html" class="text-gray-600 hover:text-brand-green font-medium transition-colors text-sm uppercase tracking-wide">Products</a>
                     <a href="about.html" class="text-gray-600 hover:text-brand-green font-medium transition-colors text-sm uppercase tracking-wide">About Us</a>
                 </div>
 
@@ -31,6 +31,7 @@ class Navbar extends HTMLElement {
                     </button>
                 </div>
             </div>
+        </nav>
 
             <!-- Mobile Menu Overlay -->
             <div id="mobile-menu" class="fixed inset-0 bg-brand-bg z-50 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center md:hidden">
@@ -41,11 +42,10 @@ class Navbar extends HTMLElement {
                 <div class="flex flex-col items-center gap-8 text-xl">
                     <a href="index.html" class="mobile-link text-brand-dark hover:text-brand-green font-serif font-bold transition-colors">Home</a>
                     <a href="about.html" class="mobile-link text-brand-dark hover:text-brand-green font-serif font-bold transition-colors">About Us</a>
-                    <a href="index.html#product-section" class="mobile-link text-brand-dark hover:text-brand-green font-serif font-bold transition-colors">Products</a>
+                    <a href="products.html" class="mobile-link text-brand-dark hover:text-brand-green font-serif font-bold transition-colors">Products</a>
                     <a href="contact.html" class="mobile-link text-brand-dark hover:text-brand-green font-serif font-bold transition-colors">Contact Us</a>
                 </div>
             </div>
-        </nav>
         `;
 
     // Re-initialize icons for this component
