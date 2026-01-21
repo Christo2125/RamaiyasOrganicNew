@@ -1,6 +1,18 @@
 class Hero extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+        <style>
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-20px) scale(1); }
+            }
+            .floating {
+                animation: float 3s ease-in-out infinite;
+            }
+            .floating:hover {
+                animation-play-state: paused;
+            }
+        </style>
         <section class="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
             <!-- Background - Leafy Texture with Fade -->
             <div class="absolute inset-0 z-0">
@@ -25,7 +37,7 @@ class Hero extends HTMLElement {
                 <div class="relative z-20 flex flex-col items-center mt-12 md:mt-20 parallax-target">
                     <!-- High Quality Product Representation -->
                     <div class="relative group">
-                        <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center transform transition-transform duration-500 hover:scale-[1.2]">
+                        <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center transform transition-transform duration-500 hover:scale-[1.2] floating">
                             <img 
                                 src="./public/images/oilBottle1.png" 
                                 alt="Ramaiah's Oil Bottle" 
@@ -58,18 +70,6 @@ class Hero extends HTMLElement {
         `;
 
     if (window.lucide) window.lucide.createIcons();
-
-    // Hero Parallax Logic
-    const heroProduct = this.querySelector("#hero-product");
-    window.addEventListener("scroll", () => {
-      const scrolled = window.scrollY;
-      const heroY = Math.min(150, (scrolled / 500) * 150);
-      const heroOpacity = Math.max(0.5, 1 - scrolled / 400);
-      if (heroProduct) {
-        heroProduct.style.transform = `translateY(${heroY}px)`;
-        heroProduct.style.opacity = heroOpacity;
-      }
-    });
   }
 }
 customElements.define("app-hero", Hero);

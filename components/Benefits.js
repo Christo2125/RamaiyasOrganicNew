@@ -12,7 +12,7 @@ class Benefits extends HTMLElement {
         </style>
         <section class="relative py-24 bg-brand-bg overflow-hidden">
             <div class="max-w-7xl mx-auto px-6 text-center">
-                <h2 class="text-[12vw] md:text-[8vw] font-serif font-bold text-brand-dark leading-none mb-12">Benefit.</h2>
+                <h2 class="text-[12vw] md:text-[8vw] font-serif font-bold text-brand-dark leading-none mb-12">Benefit</h2>
                 
                 <div class="relative max-w-4xl mx-auto h-[600px] flex items-center justify-center">
                     <div class="absolute w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-3xl"></div>

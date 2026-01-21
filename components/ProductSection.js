@@ -18,7 +18,7 @@ class ProductSection extends HTMLElement {
             <div class="relative h-[60vh] flex flex-col items-center justify-center">
                 
                 <h2 id="product-title" class="text-[15vw] font-serif font-bold text-brand-dark leading-none relative z-0 parallax-target">
-                    Products.
+                    Products
                 </h2>
                 <!-- Rising Bottle -->
                 <div id="product-bottle" class="absolute z-20 bottom-10 parallax-target flex items-end justify-center gap-8">
