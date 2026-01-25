@@ -20,8 +20,9 @@ class ProductSection extends HTMLElement {
                 <h2 id="product-title" class="text-[15vw] font-serif font-bold text-brand-dark leading-none relative z-0 parallax-target">
                     Products
                 </h2>
-                <!-- Rising Bottle -->
-                <div id="product-bottle" class="absolute z-20 bottom-10 parallax-target flex items-end justify-center gap-8">
+                <!-- Rising Bottle Container -->
+                <div id="product-bottle" class="absolute z-20 bottom-10 parallax-target flex items-end justify-center gap-12">
+                    <!-- Sesame Bottle -->
                     <div class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float">
                         <img 
                             src="./public/images/sesameBottle1.png" 
@@ -29,12 +30,8 @@ class ProductSection extends HTMLElement {
                             class="w-full h-auto object-contain filter drop-shadow-2xl"
                         />
                     </div>
-                    <div class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float-delayed">
-                        <img 
-                            src="./public/images/oilBottle1.png" 
-                            alt="Ramaiah's Coconut Oil" 
-                            class="w-full h-auto object-contain filter drop-shadow-2xl"
-                        />
+                    <!-- Shared Bottle Placeholder (Invisible) -->
+                    <div id="product-bottle-placeholder" class="w-56 md:w-72 aspect-[0.7] opacity-0 flex items-end justify-center">
                     </div>
                 </div>
             </div>

@@ -2,15 +2,12 @@ class Hero extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <style>
-            @keyframes float {
+            @keyframes float-hero {
                 0%, 100% { transform: translateY(0px) scale(1); }
-                50% { transform: translateY(-20px) scale(1); }
+                50% { transform: translateY(-15px) scale(1.02); }
             }
-            .floating {
-                animation: float 3s ease-in-out infinite;
-            }
-            .floating:hover {
-                animation-play-state: paused;
+            .hero-floating {
+                animation: float-hero 4s ease-in-out infinite;
             }
         </style>
         <section class="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
@@ -19,7 +16,7 @@ class Hero extends HTMLElement {
                 <img 
                     src="./public/images/heroBackgroundImg.jpg" 
                     alt="Leaves Background" 
-                    class="w-full h-full object-fit opacity-80"
+                    class="w-full h-full object-cover opacity-80"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
             </div>
@@ -37,11 +34,14 @@ class Hero extends HTMLElement {
                 <div class="relative z-20 flex flex-col items-center mt-12 md:mt-20 parallax-target">
                     <!-- High Quality Product Representation -->
                     <div id="bottle-parallax-wrapper" class="relative group">
-                        <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center transform transition-transform duration-500 hover:scale-[1.2] floating">
-                            <img 
+                        <!-- ID used for initial positioning -->
+                        <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center">
+                            <!-- Original Image (Will be hidden by script) -->
+                             <img 
                                 src="./public/images/oilBottle1.png" 
                                 alt="Ramaiah's Oil Bottle" 
                                 class="w-full h-full object-contain filter drop-shadow-2xl"
+                                style="opacity: 0 !important; visibility: hidden !important;"
                             />
                         </div>
                     </div>
@@ -71,40 +71,217 @@ class Hero extends HTMLElement {
 
     if (window.lucide) window.lucide.createIcons();
 
-    this.parallaxWrapper = this.querySelector("#bottle-parallax-wrapper");
-    this.currentOffset = 0;
-    this.targetOffset = 0;
+    // Initialize Animation logic after a slight delay to ensure DOM is ready
+    setTimeout(() => this.initSharedBottle(), 100);
+  }
 
-    this.handleScroll = () => {
-      // Sensitivity factor - moves the bottle down as user scrolls
-      this.targetOffset = window.scrollY * 0.6;
+  initSharedBottle() {
+    // Clean up previous instance if exists
+    const existingFloater = document.getElementById("global-shared-bottle");
+    if (existingFloater) existingFloater.remove();
+
+    this.heroWrapper = this.querySelector("#hero-product");
+    this.placeholder = document.getElementById("benefits-bottle-placeholder");
+
+    if (!this.heroWrapper || !this.placeholder) return;
+
+    // Initialize state
+    this.state = {
+      currentX: window.innerWidth / 2,
+      currentY: window.innerHeight / 2,
+      currentW: 320,
+      currentH: 416,
+      currentRot: 0,
+      currentOp: 1,
+      targetX: 0,
+      targetY: 0,
+      targetW: 0,
+      targetH: 0,
+      targetRot: 0,
+      targetOp: 1,
+      progress: 0,
     };
 
-    // Animation loop for smooth "spring" feel
-    this.animate = () => {
-      if (!this.parallaxWrapper) return;
+    // Main Bottle
+    this.floater = this.createBottle("global-shared-bottle", "40", 1);
+    document.body.appendChild(this.floater);
 
-      // Linear interpolation (Lerp): a = a + (b - a) * 0.1
-      // Adjust 0.08 for more/less "dampening" (lower = smoother/looser, higher = tighter)
-      this.currentOffset += (this.targetOffset - this.currentOffset) * 0.08;
-
-      // Apply transform with high precision
-      this.parallaxWrapper.style.transform = `translateY(${this.currentOffset}px)`;
-
-      this.rafId = requestAnimationFrame(this.animate);
+    // Bind scroll for target calculations
+    this.handleScroll = () => {
+      this.calculateTargets();
     };
 
     window.addEventListener("scroll", this.handleScroll, { passive: true });
-    this.animate(); // Start the loop
+    window.addEventListener("resize", this.handleScroll);
+
+    // Start Loop
+    this.animate();
+    this.calculateTargets(); // Initial call
+  }
+
+  createBottle(id, zIndex, opacity) {
+    const el = document.createElement("img");
+    el.id = id;
+    el.src = "./public/images/oilBottle1.png";
+    el.className = "filter drop-shadow-2xl";
+    Object.assign(el.style, {
+      position: "fixed",
+      top: "0px",
+      left: "0px",
+      width: "0px",
+      height: "0px",
+      zIndex: zIndex,
+      pointerEvents: "none",
+      transformOrigin: "center center",
+      willChange: "transform, top, left, width, height, opacity",
+      opacity: opacity,
+    });
+    return el;
+  }
+
+  calculateTargets() {
+    if (!this.heroWrapper || !this.placeholder) return;
+
+    // References
+    if (!this.productPlace)
+      this.productPlace = document.getElementById("product-bottle-placeholder");
+
+    const heroRect = this.heroWrapper.getBoundingClientRect();
+    const benefitsRect = this.placeholder.getBoundingClientRect();
+    // Recalculate the position of the product placeholder live
+    const productRect = this.productPlace
+      ? this.productPlace.getBoundingClientRect()
+      : null;
+
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+
+    const benefitsOffsetTop = scrollTop + benefitsRect.top;
+    const startScroll = 0;
+    const endScroll = Math.max(1, benefitsOffsetTop - windowHeight * 0.5);
+    const progress = Math.max(0, Math.min(1, scrollTop / endScroll));
+    this.state.progress = progress;
+
+    const t = (v) => (v < 0.5 ? 2 * v * v : -1 + (4 - 2 * v) * v);
+    const pt = t(progress);
+
+    const screenCenterY = windowHeight * 0.45;
+    const margin = windowWidth * 0.1;
+
+    // Animation Nodes: Hero -> Lifestyle -> Product -> Benefits
+    const points = [
+      {
+        x: heroRect.left + heroRect.width / 2,
+        y: heroRect.top + heroRect.height / 2,
+        stop: 0,
+      },
+      { x: windowWidth - margin, y: screenCenterY, stop: 0.2 }, // Lifestyle (Right)
+      {
+        x: productRect
+          ? productRect.left + productRect.width / 2
+          : windowWidth * 0.3,
+        y: productRect
+          ? productRect.top + productRect.height / 2
+          : screenCenterY,
+        stop: 0.7,
+      }, // Product Section (Next to Sesame)
+      {
+        x: benefitsRect.left + benefitsRect.width / 2,
+        y: benefitsRect.top + benefitsRect.height / 2,
+        stop: 1,
+      },
+    ];
+
+    let tx, ty;
+    if (progress <= points[1].stop) {
+      const segT = t(progress / points[1].stop);
+      tx = points[0].x + (points[1].x - points[0].x) * segT;
+      ty = points[0].y + (points[1].y - points[0].y) * segT;
+    } else if (progress <= points[2].stop) {
+      const segT = t(
+        (progress - points[1].stop) / (points[2].stop - points[1].stop),
+      );
+      tx = points[1].x + (points[2].x - points[1].x) * segT;
+      ty = points[1].y + (points[2].y - points[1].y) * segT;
+    } else {
+      const segT = t(
+        (progress - points[2].stop) / (points[3].stop - points[2].stop),
+      );
+      tx = points[2].x + (points[3].x - points[2].x) * segT;
+      ty = points[2].y + (points[3].y - points[2].y) * segT;
+    }
+
+    // --- TILT & SWAY ---
+    // Increased frequency for visible movement
+    const swayFreq = 10;
+    const swayAmp = 40 * (1 - pt);
+    const sway = Math.sin(progress * Math.PI * swayFreq) * swayAmp;
+
+    // Rotation lean (Tiling) based on the derivative of sway
+    const lean = Math.cos(progress * Math.PI * swayFreq) * (swayAmp * 0.5);
+
+    this.state.targetX = tx + sway;
+    this.state.targetY = ty;
+    this.state.targetW =
+      heroRect.width + (benefitsRect.width - heroRect.width) * pt;
+    this.state.targetH =
+      heroRect.height + (benefitsRect.height - heroRect.height) * pt;
+    this.state.targetRot = lean;
+
+    this.state.targetOp = 1.0;
+  }
+
+  animate() {
+    if (!this.floater) return;
+
+    // Smoothing (Lerp)
+    const lerp = (start, end, factor) => start + (end - start) * factor;
+    const speed = 0.12;
+
+    this.state.currentX = lerp(this.state.currentX, this.state.targetX, speed);
+    this.state.currentY = lerp(this.state.currentY, this.state.targetY, speed);
+    this.state.currentW = lerp(this.state.currentW, this.state.targetW, speed);
+    this.state.currentH = lerp(this.state.currentH, this.state.targetH, speed);
+    this.state.currentRot = lerp(
+      this.state.currentRot,
+      this.state.targetRot,
+      speed,
+    );
+    this.state.currentOp = lerp(
+      this.state.currentOp,
+      this.state.targetOp,
+      speed,
+    );
+
+    // Apply
+    this.floater.style.width = `${this.state.currentW}px`;
+    this.floater.style.height = `${this.state.currentH}px`;
+    this.floater.style.left = `${this.state.currentX - this.state.currentW / 2}px`;
+    this.floater.style.top = `${this.state.currentY - this.state.currentH / 2}px`;
+    this.floater.style.opacity = this.state.currentOp;
+
+    // Rotation Logic:
+    // - Lean while moving (currentRot)
+    // - Snap to -5deg at the very end
+    let rotation = this.state.currentRot;
+    if (this.state.progress > 0.98) {
+      const landingT = (this.state.progress - 0.98) / 0.02;
+      rotation = lerp(this.state.currentRot, -5, landingT);
+    }
+
+    this.floater.style.transform = `rotate(${rotation}deg)`;
+
+    this.rafId = requestAnimationFrame(() => this.animate());
   }
 
   disconnectedCallback() {
     if (this.handleScroll) {
       window.removeEventListener("scroll", this.handleScroll);
+      window.removeEventListener("resize", this.handleScroll);
     }
-    if (this.rafId) {
-      cancelAnimationFrame(this.rafId);
-    }
+    if (this.rafId) cancelAnimationFrame(this.rafId);
+    if (this.floater) this.floater.remove();
   }
 }
 customElements.define("app-hero", Hero);

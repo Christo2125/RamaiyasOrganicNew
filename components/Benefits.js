@@ -19,13 +19,8 @@ class Benefits extends HTMLElement {
                     <div class="absolute w-[400px] h-[400px] border border-brand-green/20 rounded-full animate-spin-slow"></div>
 
                     <div class="relative z-10 w-full h-full flex items-center justify-center">
-                         <div class="relative z-20 animate-float">
-                             <img 
-                                src="./public/images/oilBottle1.png" 
-                                class="w-[200px] md:w-[250px] object-contain  translate-y-2 rotate-[-5deg]  "
-                                alt="Ramiah's Coconut Oil"
-                             />
-                         </div>
+                         <div id="benefits-bottle-placeholder" class="w-[200px] md:w-[250px] aspect-[0.6] opacity-0"></div>
+
                     </div>
 
                     <!-- Benefit Pills -->

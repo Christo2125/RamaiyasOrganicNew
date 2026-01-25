@@ -84,7 +84,7 @@ class Navbar extends HTMLElement {
           "bg-brand-bg/90",
           "backdrop-blur-md",
           "py-4",
-          "shadow-sm"
+          "shadow-sm",
         );
         navEl.classList.remove("bg-transparent", "py-6");
       } else {
@@ -92,7 +92,7 @@ class Navbar extends HTMLElement {
           "bg-brand-bg/90",
           "backdrop-blur-md",
           "py-4",
-          "shadow-sm"
+          "shadow-sm",
         );
         navEl.classList.add("bg-transparent", "py-6");
       }
