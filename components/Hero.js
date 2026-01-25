@@ -36,7 +36,7 @@ class Hero extends HTMLElement {
                 <!-- Product & CTA Layer -->
                 <div class="relative z-20 flex flex-col items-center mt-12 md:mt-20 parallax-target">
                     <!-- High Quality Product Representation -->
-                    <div class="relative group">
+                    <div id="bottle-parallax-wrapper" class="relative group">
                         <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center transform transition-transform duration-500 hover:scale-[1.2] floating">
                             <img 
                                 src="./public/images/oilBottle1.png" 
@@ -70,6 +70,41 @@ class Hero extends HTMLElement {
         `;
 
     if (window.lucide) window.lucide.createIcons();
+
+    this.parallaxWrapper = this.querySelector("#bottle-parallax-wrapper");
+    this.currentOffset = 0;
+    this.targetOffset = 0;
+
+    this.handleScroll = () => {
+      // Sensitivity factor - moves the bottle down as user scrolls
+      this.targetOffset = window.scrollY * 0.6;
+    };
+
+    // Animation loop for smooth "spring" feel
+    this.animate = () => {
+      if (!this.parallaxWrapper) return;
+
+      // Linear interpolation (Lerp): a = a + (b - a) * 0.1
+      // Adjust 0.08 for more/less "dampening" (lower = smoother/looser, higher = tighter)
+      this.currentOffset += (this.targetOffset - this.currentOffset) * 0.08;
+
+      // Apply transform with high precision
+      this.parallaxWrapper.style.transform = `translateY(${this.currentOffset}px)`;
+
+      this.rafId = requestAnimationFrame(this.animate);
+    };
+
+    window.addEventListener("scroll", this.handleScroll, { passive: true });
+    this.animate(); // Start the loop
+  }
+
+  disconnectedCallback() {
+    if (this.handleScroll) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+    if (this.rafId) {
+      cancelAnimationFrame(this.rafId);
+    }
   }
 }
 customElements.define("app-hero", Hero);
