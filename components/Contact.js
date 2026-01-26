@@ -54,9 +54,7 @@ class Contact extends HTMLElement {
 
                         <!-- Social Links -->
                         <div class="mt-12 flex gap-4">
-                            <a href="https://www.instagram.com/ramaiah_organic_udangudi?igsh=MXR2ZDZmM2pyZjRzNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                        <i data-lucide="instagram" class="w-5 h-5 text-gray-400 hover:text-brand-dark cursor-pointer"></i>
-                    </a>
+                            
                         </div>
                     </div>
 
@@ -160,7 +158,7 @@ class Contact extends HTMLElement {
         }
       } catch (error) {
         alert(
-          "Oops! There was a problem submitting your form. Please try again."
+          "Oops! There was a problem submitting your form. Please try again.",
         );
         btn.disabled = false;
         btn.innerHTML = btnText;
