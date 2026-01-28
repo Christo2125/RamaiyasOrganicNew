@@ -3,8 +3,9 @@ class Footer extends HTMLElement {
     this.innerHTML = `
         <footer class="bg-brand-bg pt-16 pb-8 px-6 border-t border-gray-200">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-gray-200 rounded-3xl p-8 mb-8 relative overflow-hidden">
-                    <h3 class="text-2xl font-bold mb-6 text-brand-dark">Subscribe for our newsletter</h3>
+                <div class="bg-gray-200 rounded-3xl p-8 mb-8 relative overflow-hidden text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-brand-dark">Subscribe to our newsletter</h3>
+                    <p class="text-gray-600 text-sm mb-6">Get updates on products, health tips, and traditional wellness insights.</p>
                     <form action="https://formspree.io/f/mjggkjpz" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto relative z-10">
                         <input type="email" name="email" required placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full bg-white/50 border-none outline-none focus:ring-2 focus:ring-brand-green/20 placeholder:text-gray-500 text-brand-dark">
                         <button type="submit" class="bg-brand-yellow px-8 py-3 rounded-full font-bold text-brand-dark hover:bg-yellow-300 transition-colors whitespace-nowrap">Subscribe</button>
@@ -16,8 +17,12 @@ class Footer extends HTMLElement {
                         <i data-lucide="instagram" class="w-6 h-6 text-gray-600 group-hover:text-pink-600 transition-colors"></i>
                     </a>
                     
-                    <div class="text-sm text-gray-400">
-                        &copy; ${new Date().getFullYear()} Ramaiah's Oils. All rights reserved.
+                    <div class="text-sm text-gray-400 flex flex-col items-center gap-2">
+                        <span>&copy; 2026 Ramaiya Organic. All rights reserved.</span>
+                        <span class="text-xs">
+                            Designed & Developed by 
+                            <a href="https://www.digimarketrix.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-green transition-colors font-medium">DigiMarketrix</a>
+                        </span>
                     </div>
                 </div>
             </div>

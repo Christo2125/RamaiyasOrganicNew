@@ -13,6 +13,41 @@ class ProductSection extends HTMLElement {
                 animation: float 7s ease-in-out infinite;
                 animation-delay: 1s;
             }
+            .tooltip-container { position: relative; cursor: pointer; }
+            .tooltip-text {
+                visibility: hidden;
+                width: 250px;
+                background-color: #2d4a22;
+                color: #fff;
+                text-align: center;
+                border-radius: 12px;
+                padding: 12px;
+                position: absolute;
+                z-index: 50;
+                bottom: 110%;
+                left: 50%;
+                margin-left: -125px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: 0.75rem;
+                line-height: 1.4;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                pointer-events: none;
+            }
+            .tooltip-text::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #2d4a22 transparent transparent transparent;
+            }
+            .tooltip-container:hover .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }
         </style>
         <section id="product-section" class="relative w-full py-12 md:py-24 bg-brand-bg overflow-hidden min-h-screen">
             <div class="relative h-[60vh] flex flex-col items-center justify-center">
@@ -46,9 +81,14 @@ class ProductSection extends HTMLElement {
                     <!-- Sesame Oil Card -->
                     <a href="contact.html" class="reveal relative group bg-gradient-to-b from-amber-50 to-amber-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block">
                         <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiah's Sesame Oil</h3>
-                            <p class="text-gray-600 text-sm mb-2">Cold-Pressed & Pure</p>
-                            <p class="text-gray-500 text-xs mb-4">Traditional wood-pressed for authentic taste</p>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiya’s Sesame Oil</h3>
+                            <p class="text-gray-600 text-sm mb-2">Traditional cold-pressed gingili oil</p>
+                            <div class="tooltip-container mb-4">
+                                <p class="text-gray-500 text-xs">Authentic wood-pressed for daily health...</p>
+                                <div class="tooltip-text">
+                                    Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
+                                </div>
+                            </div>
                             <button class="bg-white px-6 py-2 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Shop Now</button>
                         </div>
                         <div class="w-40 h-56 relative z-0 transform group-hover:scale-105 transition-transform duration-300">
@@ -63,9 +103,14 @@ class ProductSection extends HTMLElement {
                     <!-- Coconut Oil Card -->
                     <a href="contact.html" class="reveal relative group bg-gradient-to-b from-green-50 to-green-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block" style="transition-delay: 100ms;">
                         <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiah's Coconut Oil</h3>
-                            <p class="text-gray-600 text-sm mb-2">Virgin & Unrefined</p>
-                            <p class="text-gray-500 text-xs mb-4">100% natural with rich aroma</p>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiya’s Coconut Oil</h3>
+                            <p class="text-gray-600 text-sm mb-2">Pure marachekku coconut oil</p>
+                            <div class="tooltip-container mb-4">
+                                <p class="text-gray-500 text-xs">Traditional extraction for pure wellness...</p>
+                                <div class="tooltip-text">
+                                    Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
+                                </div>
+                            </div>
                             <button class="bg-white px-6 py-2 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Shop Now</button>
                         </div>
                         <div class="w-40 h-56 relative z-0 transform group-hover:scale-105 transition-transform duration-300">

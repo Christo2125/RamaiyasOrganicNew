@@ -26,38 +26,38 @@ class Benefits extends HTMLElement {
                     <!-- Benefit Pills -->
                     <div class="reveal absolute top-[5%] md:top-[20%] left-0 md:left-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 200ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
-                            <i data-lucide="heart" class="w-4.5 h-4.5"></i>
+                            <i data-lucide="leaf" class="w-4.5 h-4.5"></i>
                         </span>
                         <div class="text-left">
-                            <p class="text-[10px] text-gray-500">Rich in healthy fats</p>
-                            <p class="text-xs md:text-sm font-bold text-brand-dark">Supports Heart Health</p>
+                            <p class="text-[10px] text-gray-500">Pure goodness</p>
+                            <p class="text-xs md:text-sm font-bold text-brand-dark">100% Natural</p>
                         </div>
                     </div>
                     <div class="reveal absolute top-[10%] md:top-[25%] right-0 md:right-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 300ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
-                            <i data-lucide="sparkles" class="w-4.5 h-4.5"></i>
+                            <i data-lucide="cog" class="w-4.5 h-4.5"></i>
                         </span>
                         <div class="text-left">
-                            <p class="text-[10px] text-gray-500">Vitamin E & Sesamol</p>
-                            <p class="text-xs md:text-sm font-bold text-brand-dark">Natural Antioxidants</p>
+                            <p class="text-[10px] text-gray-500">Traditional Wood-Pressed</p>
+                            <p class="text-xs md:text-sm font-bold text-brand-dark">Cold-Pressed (Marachekku)</p>
                         </div>
                     </div>
                     <div class="reveal absolute bottom-[5%] md:bottom-[20%] left-0 md:left-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 400ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
-                            <i data-lucide="leaf" class="w-4.5 h-4.5"></i>
+                            <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
                         </span>
                         <div class="text-left">
-                            <p class="text-[10px] text-gray-500">100% cold-pressed & pure</p>
-                            <p class="text-xs md:text-sm font-bold text-brand-dark">Straight From Nature</p>
+                            <p class="text-[10px] text-gray-500">Pure & Safe</p>
+                            <p class="text-xs md:text-sm font-bold text-brand-dark">No Chemicals / No Preservatives</p>
                         </div>
                     </div>
                     <div class="reveal absolute bottom-[10%] md:bottom-[15%] right-0 md:right-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 500ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
-                            <i data-lucide="zap" class="w-4.5 h-4.5"></i>
+                            <i data-lucide="utensils" class="w-4.5 h-4.5"></i>
                         </span>
                         <div class="text-left">
-                            <p class="text-[10px] text-gray-500">Medium-chain fatty acids</p>
-                            <p class="text-xs md:text-sm font-bold text-brand-dark">Quick Energy Boost</p>
+                            <p class="text-[10px] text-gray-500">Inherited goodness</p>
+                            <p class="text-xs md:text-sm font-bold text-brand-dark">Traditional Taste & Aroma</p>
                         </div>
                     </div>
                 </div>

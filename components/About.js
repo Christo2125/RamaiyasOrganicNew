@@ -8,10 +8,10 @@ class About extends HTMLElement {
                     <span class="text-brand-green font-semibold tracking-widest uppercase text-sm mb-4 block">Our Story</span>
                     <h1 class="text-6xl md:text-8xl font-serif font-bold text-brand-dark mb-6 leading-tight">
                         Legacy of <br/> 
-                        <span class="text-brand-green italic">Purity.</span>
+                        <span class="text-brand-green italic">Purity</span>
                     </h1>
                     <p class="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-                        Rooted in tradition, Ramaiah's brings the ancient wisdom of cold-pressing to your modern kitchen.
+                        Rooted in Udangudi’s rich heritage, Ramaiya Organic brings the wisdom of traditional cold-pressed oils into modern homes
                     </p>
                 </div>
 
@@ -20,10 +20,10 @@ class About extends HTMLElement {
                     <div class="reveal active bg-white rounded-[3rem] p-12 shadow-xl shadow-brand-green/5 flex flex-col justify-center">
                         <h2 class="text-3xl font-serif font-bold text-brand-dark mb-6">Traditional Extraction</h2>
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            At Ramaiah's, we believe that nature knows best. Our journey began with a simple mission: to preserve the nutritional integrity of oils just as they are found in nature. 
+                            We believe purity is not a trend — it is a responsibility. Our products reflect generations of knowledge, patience, and respect for nature.
                         </p>
                         <p class="text-gray-600 leading-relaxed">
-                            We use the ancient wood-pressed method. This traditional extraction process ensures no heat is generated, preserving all the vital nutrients, minerals, and the authentic aroma of the seeds.
+                            At Ramaiya Organic, we follow the time-tested marachekku (wood-pressed) method. This slow, cold-pressed process avoids heat and chemicals, preserving nutrients, natural aroma, and authentic taste. Every drop carries the honesty of tradition.
                         </p>
                     </div>
                     <div class="reveal active rounded-[3rem] overflow-hidden h-[500px] shadow-2xl">
@@ -59,27 +59,27 @@ class About extends HTMLElement {
                 </div>
 
                 <!-- Values Section -->
-                <div class="reveal bg-brand-dark rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+                <div class="reveal bg-gradient-to-br from-[#9fab76] to-[#7d8c55] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-10"></div>
                     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 italic text-brand-yellow">Why Ramaiah's?</h2>
+                            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 text-white">Why Ramaiah's?</h2>
                             <ul class="space-y-6">
                                 <li class="flex items-center gap-4">
-                                    <div class="w-8 h-8 bg-brand-yellow/20 rounded-full flex items-center justify-center border border-brand-yellow/30">
-                                        <i data-lucide="check" class="w-4 h-4 text-brand-yellow"></i>
+                                    <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                                        <i data-lucide="check" class="w-4 h-4 text-white"></i>
                                     </div>
                                     <span class="text-lg font-medium">True Cold-Pressed Technique</span>
                                 </li>
                                 <li class="flex items-center gap-4">
-                                    <div class="w-8 h-8 bg-brand-yellow/20 rounded-full flex items-center justify-center border border-brand-yellow/30">
-                                        <i data-lucide="check" class="w-4 h-4 text-brand-yellow"></i>
+                                    <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                                        <i data-lucide="check" class="w-4 h-4 text-white"></i>
                                     </div>
                                     <span class="text-lg font-medium">No Chemicals or Preservatives</span>
                                 </li>
                                 <li class="flex items-center gap-4">
-                                    <div class="w-8 h-8 bg-brand-yellow/20 rounded-full flex items-center justify-center border border-brand-yellow/30">
-                                        <i data-lucide="check" class="w-4 h-4 text-brand-yellow"></i>
+                                    <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                                        <i data-lucide="check" class="w-4 h-4 text-white"></i>
                                     </div>
                                     <span class="text-lg font-medium">Sustainably Sourced Seeds</span>
                                 </li>
@@ -87,20 +87,20 @@ class About extends HTMLElement {
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                              <div class="aspect-square bg-white/5 rounded-2xl flex flex-col items-center justify-center p-6 border border-white/10">
-                                <i data-lucide="shield-check" class="w-8 h-8 text-brand-yellow mb-4"></i>
-                                <span class="text-sm font-bold uppercase tracking-wider text-center">Safety <br/> First</span>
+                                 <i data-lucide="shield-check" class="w-8 h-8 text-white mb-4 opacity-80"></i>
+                                 <span class="text-sm font-bold uppercase tracking-wider text-center text-white/90">Safety <br/> First</span>
                              </div>
                              <div class="aspect-square bg-white/5 rounded-2xl flex flex-col items-center justify-center p-6 border border-white/10">
-                                <i data-lucide="heart" class="w-8 h-8 text-brand-yellow mb-4"></i>
-                                <span class="text-sm font-bold uppercase tracking-wider text-center">Handmade <br/> with Love</span>
+                                 <i data-lucide="heart" class="w-8 h-8 text-white mb-4 opacity-80"></i>
+                                 <span class="text-sm font-bold uppercase tracking-wider text-center text-white/90">Handmade <br/> with Love</span>
                              </div>
                              <div class="aspect-square bg-white/5 rounded-2xl flex flex-col items-center justify-center p-6 border border-white/10">
-                                <i data-lucide="leaf" class="w-8 h-8 text-brand-yellow mb-4"></i>
-                                <span class="text-sm font-bold uppercase tracking-wider text-center">Eco <br/> Friendly</span>
+                                 <i data-lucide="leaf" class="w-8 h-8 text-white mb-4 opacity-80"></i>
+                                 <span class="text-sm font-bold uppercase tracking-wider text-center text-white/90">Eco <br/> Friendly</span>
                              </div>
                              <div class="aspect-square bg-white/5 rounded-2xl flex flex-col items-center justify-center p-6 border border-white/10">
-                                <i data-lucide="award" class="w-8 h-8 text-brand-yellow mb-4"></i>
-                                <span class="text-sm font-bold uppercase tracking-wider text-center">Premium <br/> Quality</span>
+                                 <i data-lucide="award" class="w-8 h-8 text-white mb-4 opacity-80"></i>
+                                 <span class="text-sm font-bold uppercase tracking-wider text-center text-white/90">Timeless <br/> Health</span>
                              </div>
                         </div>
                     </div>

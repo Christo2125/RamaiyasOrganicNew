@@ -1,13 +1,50 @@
 class AllProducts extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+        <style>
+            .tooltip-container { position: relative; cursor: pointer; }
+            .tooltip-text {
+                visibility: hidden;
+                width: 250px;
+                background-color: #2d4a22;
+                color: #fff;
+                text-align: center;
+                border-radius: 12px;
+                padding: 12px;
+                position: absolute;
+                z-index: 50;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -125px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: 0.75rem;
+                line-height: 1.4;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                pointer-events: none;
+            }
+            .tooltip-text::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #2d4a22 transparent transparent transparent;
+            }
+            .tooltip-container:hover .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
         <section class="w-full py-12 md:py-24 bg-brand-bg min-h-screen">
             <div class="max-w-7xl mx-auto px-6">
                 <!-- Header -->
                 <div class="text-center mb-16">
                     <h1 class="text-4xl md:text-6xl font-serif font-bold text-brand-dark mb-4 reveal">Our Products</h1>
                     <p class="text-gray-600 max-w-2xl mx-auto reveal" style="transition-delay: 100ms;">
-                        Explore our complete range of authentic, traditional, and natural products. From wood-pressed oils to pure sweeteners.
+                        Explore our complete range of authentic, traditional, and natural products, thoughtfully prepared to support everyday wellness.
                     </p>
                 </div>
 
@@ -20,9 +57,14 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/sesameoilImg.png" alt="Ramaiah's Sesame Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiah's Sesame Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Sesame Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Gingili Oil / மரச்செக்கு நல்லெண்ணெய்</p>
-                            <p class="text-gray-500 text-xs mb-4 line-clamp-2">Traditional wood-pressed sesame oil for authentic taste and health.</p>
+                            <div class="tooltip-container mb-4">
+                                <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma...</p>
+                                <div class="tooltip-text">
+                                    Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
+                                </div>
+                            </div>
                             <button class="w-full bg-white py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Order Now</button>
                         </div>
                     </a>
@@ -33,9 +75,14 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/groundnutoilHand.png" alt="Ramaiah's Coconut Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiah's Coconut Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Coconut Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Coconut Oil / மரச்செக்கு தேங்காய் எண்ணெய்</p>
-                            <p class="text-gray-500 text-xs mb-4 line-clamp-2">Virgin, unrefined, and 100% natural coconut oil.</p>
+                            <div class="tooltip-container mb-4">
+                                <p class="text-gray-500 text-xs line-clamp-2">Pure marachekku coconut oil made without heat or chemicals...</p>
+                                <div class="tooltip-text">
+                                    Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
+                                </div>
+                            </div>
                             <button class="w-full bg-white py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Order Now</button>
                         </div>
                     </a>
@@ -46,9 +93,14 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/groundnutImage.png" alt="Ramaiah's Groundnut Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiah's Groundnut Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Groundnut Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Groundnut Oil / மரச்செக்கு கடலை எண்ணெய்</p>
-                            <p class="text-gray-500 text-xs mb-4 line-clamp-2">Pure wood-pressed groundnut oil, perfect for cooking.</p>
+                            <div class="tooltip-container mb-4">
+                                <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed groundnut oil with natural flavour...</p>
+                                <div class="tooltip-text">
+                                    Traditional cold-pressed groundnut oil with natural flavour. Extracted using the traditional wood-pressed method for maximum nutrient retention.
+                                </div>
+                            </div>
                             <button class="w-full bg-white py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Order Now</button>
                         </div>
                     </a>

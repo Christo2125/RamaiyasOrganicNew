@@ -23,11 +23,12 @@ class Hero extends HTMLElement {
 
             <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center">
                 <!-- Brand Text Layer -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-left z-0 w-full pointer-events-none select-none">
-                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiah's</span>
-                    <h1 class="text-[16vw] leading-none font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
-                        Pure Oils
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center">
+                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiya’s</span>
+                    <h1 class="text-[10vw] md:text-[8vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
+                        Pure & Traditional Oils
                     </h1>
+                     <p class="reveal text-brand-green font-serif italic text-lg md:text-2xl mt-2" style="transition-delay: 400ms;">Pure. Cold-Pressed. Naturally Healthy.</p>
                 </div>
 
                 <!-- Product & CTA Layer -->
@@ -58,10 +59,10 @@ class Hero extends HTMLElement {
 
                 <!-- Floating Info Cards (Bottom) -->
                 <div class="absolute bottom-10 w-full px-6 md:px-12 flex flex-col md:flex-row justify-end items-end pointer-events-none">
-                    <div class="reveal pointer-events-auto text-right max-w-xs" style="transition-delay: 700ms;">
-                        <h3 class="text-xl font-bold text-brand-dark mb-2">Traditional Oil</h3>
+                    <div class="reveal pointer-events-auto text-right max-w-sm" style="transition-delay: 700ms;">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Traditional Oil. Timeless Health.</h3>
                         <p class="text-brand-dark/70 text-sm font-medium leading-relaxed">
-                            Authentic cold-pressed Sesame and Coconut oils, crafted for purity and health.
+                            Rooted in Udangudi tradition, Ramaiya Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
                         </p>
                     </div>
                 </div>

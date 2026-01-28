@@ -37,7 +37,7 @@ class Contact extends HTMLElement {
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-brand-dark mb-1">Phone</h4>
-                                    <p class="text-gray-500">9543811405,7871691725 </p>
+                                    <p class="text-gray-500">95438 11405 / 78716 91725</p>
                                 </div>
                             </div>
 
@@ -73,10 +73,11 @@ class Contact extends HTMLElement {
                             </div>
 
                             <div class="space-y-2">
-                                <label class="text-sm font-semibold text-brand-dark px-1">Interested Project</label>
+                                <label class="text-sm font-semibold text-brand-dark px-1">Interested Product</label>
                                 <select name="product" class="w-full px-6 py-4 rounded-2xl bg-brand-bg/50 border-0 focus:ring-2 focus:ring-brand-green outline-none transition-all text-gray-500 appearance-none">
                                     <option>Sesame Oil</option>
                                     <option>Coconut Oil</option>
+                                    <option>Groundnut Oil</option>
                                     <option>Bulk Inquiry</option>
                                     <option>Other</option>
                                 </select>
