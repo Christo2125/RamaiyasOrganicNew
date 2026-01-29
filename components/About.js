@@ -11,7 +11,7 @@ class About extends HTMLElement {
                         <span class="text-brand-green italic">Purity</span>
                     </h1>
                     <p class="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-                        Rooted in Udangudi’s rich heritage, Ramaiya Organic brings the wisdom of traditional cold-pressed oils into modern homes
+                        Rooted in Udangudi’s rich heritage, ramaiah Organic brings the wisdom of traditional cold-pressed oils into modern homes
                     </p>
                 </div>
 
@@ -23,7 +23,7 @@ class About extends HTMLElement {
                             We believe purity is not a trend — it is a responsibility. Our products reflect generations of knowledge, patience, and respect for nature.
                         </p>
                         <p class="text-gray-600 leading-relaxed">
-                            At Ramaiya Organic, we follow the time-tested marachekku (wood-pressed) method. This slow, cold-pressed process avoids heat and chemicals, preserving nutrients, natural aroma, and authentic taste. Every drop carries the honesty of tradition.
+                            At ramaiah Organic, we follow the time-tested marachekku (wood-pressed) method. This slow, cold-pressed process avoids heat and chemicals, preserving nutrients, natural aroma, and authentic taste. Every drop carries the honesty of tradition.
                         </p>
                     </div>
                     <div class="reveal active rounded-[3rem] overflow-hidden h-[500px] shadow-2xl">

@@ -18,10 +18,9 @@ class Footer extends HTMLElement {
                     </a>
                     
                     <div class="text-sm text-gray-400 flex flex-col items-center gap-2">
-                        <span>&copy; 2026 Ramaiya Organic. All rights reserved.</span>
+                        <span>&copy; 2026 ramaiah Organic. All rights reserved.</span>
                         <span class="text-xs">
-                            Designed & Developed by 
-                            <a href="https://www.digimarketrix.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-green transition-colors font-medium">DigiMarketrix</a>
+                            Designed & Developed by DigiMarketrix 
                         </span>
                     </div>
                 </div>

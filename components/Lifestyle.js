@@ -4,10 +4,10 @@ class Lifestyle extends HTMLElement {
         <section id="about" class="py-20 px-4 md:px-6 bg-gradient-to-b from-brand-bg to-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-7xl md:text-9xl font-serif font-bold text-brand-dark mb-4 tracking-tighter">Ramaiya’s</h2>
+                    <h2 class="text-7xl md:text-9xl font-serif font-bold text-brand-dark mb-4 tracking-tighter">ramaiah’s</h2>
                     <p class="text-brand-green font-serif text-xl md:text-2xl mb-6 italic">Natural oils made with care</p>
                     <p class="text-gray-600 font-medium max-w-3xl mx-auto mb-4">From sourcing quality seeds to slow, wood-pressed extraction, every step reflects our commitment to health, honesty, and tradition.</p>
-                    <p class="text-gray-400 italic font-serif max-w-2xl mx-auto">At Ramaiya Organic, we believe true wellness begins with purity. <br class="hidden md:block"/> Our cold-pressed oils preserve natural nutrients, aroma, and taste — just as generations trusted before us.</p>
+                    <p class="text-gray-400 italic font-serif max-w-2xl mx-auto">At ramaiah Organic, we believe true wellness begins with purity. <br class="hidden md:block"/> Our cold-pressed oils preserve natural nutrients, aroma, and taste — just as generations trusted before us.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-auto md:h-[800px]">

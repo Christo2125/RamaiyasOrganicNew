@@ -24,7 +24,7 @@ class Hero extends HTMLElement {
             <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center">
                 <!-- Brand Text Layer -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center">
-                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiya’s</span>
+                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">ramaiah’s</span>
                     <h1 class="text-[10vw] md:text-[8vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
                         Pure & Traditional Oils
                     </h1>
@@ -62,7 +62,7 @@ class Hero extends HTMLElement {
                     <div class="reveal pointer-events-auto text-right max-w-sm" style="transition-delay: 700ms;">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">Traditional Oil. Timeless Health.</h3>
                         <p class="text-brand-dark/70 text-sm font-medium leading-relaxed">
-                            Rooted in Udangudi tradition, Ramaiya Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
+                            Rooted in Udangudi tradition, ramaiah Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
                         </p>
                     </div>
                 </div>

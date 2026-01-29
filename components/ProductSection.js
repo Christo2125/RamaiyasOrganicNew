@@ -81,7 +81,7 @@ class ProductSection extends HTMLElement {
                     <!-- Sesame Oil Card -->
                     <a href="contact.html" class="reveal relative group bg-gradient-to-b from-amber-50 to-amber-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block">
                         <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiya’s Sesame Oil</h3>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-1">ramaiah’s Sesame Oil</h3>
                             <p class="text-gray-600 text-sm mb-2">Traditional cold-pressed gingili oil</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs">Authentic wood-pressed for daily health...</p>
@@ -103,7 +103,7 @@ class ProductSection extends HTMLElement {
                     <!-- Coconut Oil Card -->
                     <a href="contact.html" class="reveal relative group bg-gradient-to-b from-green-50 to-green-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block" style="transition-delay: 100ms;">
                         <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">Ramaiya’s Coconut Oil</h3>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-1">ramaiah’s Coconut Oil</h3>
                             <p class="text-gray-600 text-sm mb-2">Pure marachekku coconut oil</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs">Traditional extraction for pure wellness...</p>

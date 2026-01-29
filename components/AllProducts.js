@@ -57,7 +57,7 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/sesameoilImg.png" alt="Ramaiah's Sesame Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Sesame Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Sesame Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Gingili Oil / மரச்செக்கு நல்லெண்ணெய்</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma...</p>
@@ -75,7 +75,7 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/groundnutoilHand.png" alt="Ramaiah's Coconut Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Coconut Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Coconut Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Coconut Oil / மரச்செக்கு தேங்காய் எண்ணெய்</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Pure marachekku coconut oil made without heat or chemicals...</p>
@@ -93,7 +93,7 @@ class AllProducts extends HTMLElement {
                              <img src="./public/images/groundnutImage.png" alt="Ramaiah's Groundnut Oil" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-lg">
                         </div>
                         <div class="text-center w-full">
-                            <h3 class="text-xl font-bold text-brand-dark mb-1">Ramaiya’s Groundnut Oil</h3>
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Groundnut Oil</h3>
                             <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Groundnut Oil / மரச்செக்கு கடலை எண்ணெய்</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed groundnut oil with natural flavour...</p>
