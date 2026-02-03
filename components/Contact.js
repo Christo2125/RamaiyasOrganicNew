@@ -75,9 +75,25 @@ class Contact extends HTMLElement {
                             <div class="space-y-2">
                                 <label class="text-sm font-semibold text-brand-dark px-1">Interested Product</label>
                                 <select name="product" class="w-full px-6 py-4 rounded-2xl bg-brand-bg/50 border-0 focus:ring-2 focus:ring-brand-green outline-none transition-all text-gray-500 appearance-none">
-                                    <option>Sesame Oil</option>
-                                    <option>Coconut Oil</option>
-                                    <option>Groundnut Oil</option>
+                                    <option disabled selected>Select a Product</option>
+                                    <optgroup label="Sesame Oil">
+                                        <option>Sesame Oil - 1000ml</option>
+                                        <option>Sesame Oil - 500ml</option>
+                                    </optgroup>
+                                    <optgroup label="Coconut Oil">
+                                        <option>Coconut Oil - 1000ml</option>
+                                        <option>Coconut Oil - 500ml</option>
+                                        <option>Coconut Oil - 200ml</option>
+                                    </optgroup>
+                                    <optgroup label="Groundnut Oil">
+                                        <option>Groundnut Oil - 1000ml</option>
+                                        <option>Groundnut Oil - 500ml</option>
+                                    </optgroup>
+                                    <optgroup label="Forest Honey">
+                                        <option>Forest Honey - 1kg</option>
+                                        <option>Forest Honey - 1/2 kg</option>
+                                        <option>Forest Honey - 1/4 kg</option>
+                                    </optgroup>
                                     <option>Bulk Inquiry</option>
                                     <option>Other</option>
                                 </select>
@@ -99,7 +115,7 @@ class Contact extends HTMLElement {
                 <!-- Footer Image Banner -->
                 <div class="mt-24 reveal h-[400px] rounded-[3rem] overflow-hidden relative group">
                     <img 
-                        src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=2070&auto=format&fit=crop" 
+                        src="public/images/footerBanner2.png" 
                         alt="Organic Farming" 
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     >

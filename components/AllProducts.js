@@ -58,7 +58,8 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full">
                             <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Sesame Oil</h3>
-                            <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Gingili Oil / மரச்செக்கு நல்லெண்ணெய்</p>
+                            <p class="text-brand-green font-serif text-sm italic mb-1">Marachekku Gingili Oil / மரச்செக்கு நல்லெண்ணெய்</p>
+                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1000ml , 500 ml</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma...</p>
                                 <div class="tooltip-text">
@@ -76,7 +77,8 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full">
                             <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Coconut Oil</h3>
-                            <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Coconut Oil / மரச்செக்கு தேங்காய் எண்ணெய்</p>
+                            <p class="text-brand-green font-serif text-sm italic mb-1">Marachekku Coconut Oil / மரச்செக்கு தேங்காய் எண்ணெய்</p>
+                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1000 ml , 500ml , 200ml</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Pure marachekku coconut oil made without heat or chemicals...</p>
                                 <div class="tooltip-text">
@@ -94,7 +96,8 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full">
                             <h3 class="text-xl font-bold text-brand-dark mb-1">ramaiah’s Groundnut Oil</h3>
-                            <p class="text-brand-green font-serif text-sm italic mb-2">Marachekku Groundnut Oil / மரச்செக்கு கடலை எண்ணெய்</p>
+                            <p class="text-brand-green font-serif text-sm italic mb-1">Marachekku Groundnut Oil / மரச்செக்கு கடலை எண்ணெய்</p>
+                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1000 ml ,500ml</p>
                             <div class="tooltip-container mb-4">
                                 <p class="text-gray-500 text-xs line-clamp-2">Traditional cold-pressed groundnut oil with natural flavour...</p>
                                 <div class="tooltip-text">
@@ -151,8 +154,8 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full">
                             <h3 class="text-xl font-bold text-brand-dark mb-1">Forest Honey</h3>
-                            <p class="text-brand-green font-serif text-sm italic mb-2">Wild Honey / மலைத்தேன்</p>
-                            <p class="text-gray-500 text-xs mb-4 line-clamp-2">Pure wild honey gathered from the forest.</p>
+                            <p class="text-brand-green font-serif text-sm italic mb-1">Wild Honey / மலைத்தேன்</p>
+                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1kg , 1/2 kg , 1/4 kg</p>
                             <button class="w-full bg-white py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Order Now</button>
                         </div>
                     </a>

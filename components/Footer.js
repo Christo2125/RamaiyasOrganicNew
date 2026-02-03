@@ -13,9 +13,14 @@ class Footer extends HTMLElement {
                 </div>
                 
                 <div class="flex flex-col items-center gap-6">
-                    <a href="https://www.instagram.com/ramaiah_organic_udangudi?igsh=MXR2ZDZmM2pyZjRzNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
-                        <i data-lucide="instagram" class="w-6 h-6 text-gray-600 group-hover:text-pink-600 transition-colors"></i>
-                    </a>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.instagram.com/ramaiah_organic_udangudi?igsh=MXR2ZDZmM2pyZjRzNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
+                            <i data-lucide="instagram" class="w-6 h-6 text-gray-600 group-hover:text-pink-600 transition-colors"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
+                            <i data-lucide="facebook" class="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors"></i>
+                        </a>
+                    </div>
                     
                     <div class="text-sm text-gray-400 flex flex-col items-center gap-2">
                         <span>&copy; 2026 ramaiah Organic. All rights reserved.</span>
