@@ -11,7 +11,7 @@ class About extends HTMLElement {
                         <span class="text-brand-green italic">Purity</span>
                     </h1>
                     <p class="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-                        Rooted in Udangudi’s rich heritage, ramaiah Organic brings the wisdom of traditional cold-pressed oils into modern homes
+                        Rooted in Udangudi’s rich heritage, Ramaiah Organic brings the wisdom of traditional cold-pressed oils into modern homes
                     </p>
                 </div>
 
@@ -23,7 +23,7 @@ class About extends HTMLElement {
                             We believe purity is not a trend — it is a responsibility. Our products reflect generations of knowledge, patience, and respect for nature.
                         </p>
                         <p class="text-gray-600 leading-relaxed">
-                            At ramaiah Organic, we follow the time-tested marachekku (wood-pressed) method. This slow, cold-pressed process avoids heat and chemicals, preserving nutrients, natural aroma, and authentic taste. Every drop carries the honesty of tradition.
+                            At Ramaiah Organic, we follow the time-tested marachekku (wood-pressed) method. This slow, cold-pressed process avoids heat and chemicals, preserving nutrients, natural aroma, and authentic taste. Every drop carries the honesty of tradition.
                         </p>
                     </div>
                     <div class="reveal active rounded-[3rem] overflow-hidden h-[500px] shadow-2xl">
@@ -35,25 +35,26 @@ class About extends HTMLElement {
                     </div>
                 </div>
 
-                <!-- Visual Grid (Inspiration from Lifestyle.js) -->
+                <!-- Visual Grid (Inspiration from Lifestyle.js) -->  
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-                    <div class="reveal bg-[#f0f2eb] rounded-3xl p-8 relative overflow-hidden group h-[400px] flex flex-col justify-between">
+                    <div class="reveal bg-gradient-to-br from-emerald-50 to-emerald-100/40 rounded-3xl p-8 relative overflow-hidden group h-[400px] flex flex-col justify-between border border-emerald-100/50">
                         <div>
                             <span class="bg-brand-green text-white text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Innovation</span>
                             <h3 class="text-2xl font-serif font-bold text-brand-dark mt-4">Merging Tradition <br/> with Quality</h3>
                         </div>
-                        <p class="text-gray-600 text-sm relative z-10">We use modern quality checks on ancient pressing techniques.</p>
+                        <p class="text-gray-600 text-sm relative z-10 font-medium">We use modern quality checks on ancient pressing techniques.</p>
                         <div class="absolute bottom-[-50px] right-[-50px] w-48 h-48 bg-brand-green rounded-full blur-3xl opacity-10"></div>
                     </div>
 
-                    <div class="reveal bg-[#faf5eb] rounded-3xl p-8 relative overflow-hidden group h-[400px] flex flex-col justify-between md:col-span-2">
+                    <div class="reveal bg-gradient-to-br from-amber-50 to-amber-100/40 rounded-3xl p-8 relative overflow-hidden group h-[400px] flex flex-col justify-between md:col-span-2 border border-amber-100/50">
                          <div class="max-w-md relative z-10">
                             <span class="bg-brand-yellow text-brand-dark text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Purity</span>
                             <h3 class="text-4xl font-serif font-bold text-brand-dark mt-4">100% Organic, <br/> 0% Compromise</h3>
-                            <p class="text-gray-600 text-lg mt-4">Every drop is a testament to our commitment to your health and the environment.</p>
+                            <p class="text-gray-600 font-medium text-lg mt-4 leading-tight">Every drop is a testament to our commitment to your health and the environment.</p>
                         </div>
                         <div class="absolute inset-0 w-full h-full md:w-1/2 md:left-auto md:right-0">
-                            <img src="./public/images/leave.jpg" class="w-full h-full object-cover opacity-70 md:opacity-100" alt="Sustainable farming">
+                            <img src="./public/images/leave.jpg" class="w-full h-full object-cover opacity-60 md:opacity-100" alt="Sustainable farming">
+                             <div class="absolute inset-0 bg-gradient-to-r from-amber-50 via-amber-50/40 to-transparent hidden md:block"></div>
                         </div>
                     </div>
                 </div>

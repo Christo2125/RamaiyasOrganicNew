@@ -65,64 +65,67 @@ class ProductSection extends HTMLElement {
                             class="w-full h-auto object-contain filter drop-shadow-2xl"
                         />
                     </div>
-                    <!-- Shared Bottle Placeholder (Invisible) -->
-                    <div id="product-bottle-placeholder" class="w-56 md:w-72 aspect-[0.7] opacity-0 flex items-end justify-center">
+                    <!-- Coconut Bottle (Starting point for animation) -->
+                    <div id="product-bottle-placeholder" class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float-delayed">
+                        <img 
+                            id="static-coconut-bottle"
+                            src="./public/images/oilBottle1.png" 
+                            alt="Ramaiah's Coconut Oil" 
+                            class="w-full h-auto object-contain filter drop-shadow-2xl"
+                        />
                     </div>
                 </div>
             </div>
 
             <div class="max-w-7xl mx-auto px-6 mt-12 relative z-30">
-                <div class="flex justify-between items-center mb-8 px-2 bg-gray-200/50 p-4 rounded-full backdrop-blur-sm">
-                    <span class="font-medium text-brand-dark ml-4">Products</span>
-                  
-                </div>
+                
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     <!-- Sesame Oil Card -->
-                    <a href="contact.html" class="reveal relative group bg-gradient-to-b from-amber-50 to-amber-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block">
-                        <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">ramaiah’s Sesame Oil</h3>
-                            <p class="text-gray-600 text-sm mb-1">Traditional cold-pressed gingili oil</p>
-                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1000ml , 500 ml</p>
-                            <div class="tooltip-container mb-4">
-                                <p class="text-gray-500 text-xs">Authentic wood-pressed for daily health...</p>
-                                <div class="tooltip-text">
-                                    Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
-                                </div>
-                            </div>
-                            <button class="bg-white px-6 py-2 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Shop Now</button>
-                        </div>
-                        <div class="w-40 h-56 relative z-0 transform group-hover:scale-105 transition-transform duration-300">
+                    <a href="contact.html" class="reveal group bg-gradient-to-br from-amber-50 to-amber-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-amber-200/40 transition-all duration-500 block border border-amber-100/50">
+                        <div class="w-40 h-56 relative z-0 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 mb-6">
                             <img 
                                 src="./public/images/sesameBottle1.png" 
                                 alt="Ramaiah's Sesame Oil" 
                                 class="w-full h-full object-contain filter drop-shadow-xl"
                             />
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-amber-200/50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </a>
-                    <!-- Coconut Oil Card -->
-                    <a href="contact.html" class="reveal relative group bg-gradient-to-b from-green-50 to-green-100 rounded-[2.5rem] p-8 min-h-[450px] flex flex-col items-center justify-end overflow-hidden hover:shadow-xl transition-shadow block" style="transition-delay: 100ms;">
-                        <div class="absolute top-8 left-0 w-full text-center z-10">
-                            <h3 class="text-2xl font-bold text-brand-dark mb-1">ramaiah’s Coconut Oil</h3>
-                            <p class="text-gray-600 text-sm mb-1">Pure marachekku coconut oil</p>
-                            <p class="text-xs font-bold text-brand-dark mb-2">Available in 1000 ml , 500ml , 200ml</p>
-                            <div class="tooltip-container mb-4">
-                                <p class="text-gray-500 text-xs">Traditional extraction for pure wellness...</p>
+                        <div class="w-full text-center z-10 transition-transform duration-300 group-hover:-translate-y-1">
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Ramaiah’s Sesame Oil</h3>
+                            <p class="text-amber-800/70 text-sm mb-2 font-medium">Traditional cold-pressed gingili oil</p>
+                            <p class="text-xs font-bold text-brand-dark mb-4 bg-amber-200/50 py-1 px-3 rounded-full inline-block">Available in 1000ml , 500 ml</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs text-center opacity-80">Authentic wood-pressed for daily health...</p>
                                 <div class="tooltip-text">
-                                    Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
+                                    Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
                                 </div>
                             </div>
-                            <button class="bg-white px-6 py-2 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow transition-colors">Shop Now</button>
+                            <button class="bg-white border border-amber-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Shop Now</button>
                         </div>
-                        <div class="w-40 h-56 relative z-0 transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-300/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    <!-- Coconut Oil Card -->
+                    <a href="contact.html" class="reveal group bg-gradient-to-br from-emerald-50 to-emerald-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-emerald-200/40 transition-all duration-500 block border border-emerald-100/50" style="transition-delay: 100ms;">
+                        <div class="w-40 h-56 relative z-0 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 mb-6">
                             <img 
                                 src="./public/images/oilBottle1.png" 
                                 alt="Ramaiah's Coconut Oil" 
                                 class="w-full h-full object-contain filter drop-shadow-xl"
                             />
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-green-200/50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="w-full text-center z-10 transition-transform duration-300 group-hover:-translate-y-1">
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Ramaiah’s Coconut Oil</h3>
+                            <p class="text-emerald-800/70 text-sm mb-2 font-medium">Pure marachekku coconut oil</p>
+                            <p class="text-xs font-bold text-brand-dark mb-4 bg-emerald-200/50 py-1 px-3 rounded-full inline-block">Available in 1000 ml , 500ml , 200ml</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs text-center opacity-80">Traditional extraction for pure wellness...</p>
+                                <div class="tooltip-text">
+                                    Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
+                                </div>
+                            </div>
+                            <button class="bg-white border border-emerald-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Shop Now</button>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-emerald-300/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
                 </div>
 

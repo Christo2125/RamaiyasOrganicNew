@@ -3,18 +3,11 @@ class Footer extends HTMLElement {
     this.innerHTML = `
         <footer class="bg-brand-bg pt-16 pb-8 px-6 border-t border-gray-200">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="bg-gray-200 rounded-3xl p-8 mb-8 relative overflow-hidden text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-brand-dark">Subscribe to our newsletter</h3>
-                    <p class="text-gray-600 text-sm mb-6">Get updates on products, health tips, and traditional wellness insights.</p>
-                    <form action="https://formspree.io/f/mjggkjpz" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto relative z-10">
-                        <input type="email" name="email" required placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full bg-white/50 border-none outline-none focus:ring-2 focus:ring-brand-green/20 placeholder:text-gray-500 text-brand-dark">
-                        <button type="submit" class="bg-brand-yellow px-8 py-3 rounded-full font-bold text-brand-dark hover:bg-yellow-300 transition-colors whitespace-nowrap">Subscribe</button>
-                    </form>
-                </div>
+                
                 
                 <div class="flex flex-col items-center gap-6">
                     <div class="flex items-center gap-4">
-                        <a href="https://www.instagram.com/ramaiah_organic_udangudi?igsh=MXR2ZDZmM2pyZjRzNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
+                        <a href="https://www.instagram.com/Ramaiah_organic_udangudi?igsh=MXR2ZDZmM2pyZjRzNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
                             <i data-lucide="instagram" class="w-6 h-6 text-gray-600 group-hover:text-pink-600 transition-colors"></i>
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer" class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-all hover:scale-110 group">
@@ -23,7 +16,7 @@ class Footer extends HTMLElement {
                     </div>
                     
                     <div class="text-sm text-gray-400 flex flex-col items-center gap-2">
-                        <span>&copy; 2026 ramaiah Organic. All rights reserved.</span>
+                        <span>&copy; 2026 Ramaiah Organic. All rights reserved.</span>
                         <span class="text-xs">
                             Designed & Developed by DigiMarketrix 
                         </span>

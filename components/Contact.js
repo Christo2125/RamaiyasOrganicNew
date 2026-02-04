@@ -47,7 +47,7 @@ class Contact extends HTMLElement {
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-brand-dark mb-1">Email</h4>
-                                    <p class="text-gray-500">ramaiahorganic@gmail.com</p>
+                                    <p class="text-gray-500">Ramaiahorganic@gmail.com</p>
                                 </div>
                             </div>
                         </div>

@@ -6,8 +6,15 @@ class Hero extends HTMLElement {
                 0%, 100% { transform: translateY(0px) scale(1); }
                 50% { transform: translateY(-15px) scale(1.02); }
             }
+            @keyframes float-decoration {
+                0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+                50% { transform: translate(-50%, -50%) translateY(-40px); }
+            }
             .hero-floating {
                 animation: float-hero 4s ease-in-out infinite;
+            }
+            .decoration-floating {
+                animation: float-decoration 6s ease-in-out infinite;
             }
         </style>
         <section class="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
@@ -19,12 +26,21 @@ class Hero extends HTMLElement {
                     class="w-full h-full object-cover opacity-80"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
+                
+                <!-- Decorative Floating Bottle Behind Content -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[30vw] max-w-[400px] max-h-[700px] z-0 opacity-90 decoration-floating pointer-events-none">
+                    <img 
+                        src="./public/images/oilBottle1.png" 
+                        alt="Decorative Bottle" 
+                        class="w-full h-full object-contain"
+                    />
+                </div>
             </div>
 
             <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center">
                 <!-- Brand Text Layer -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center">
-                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">ramaiah’s</span>
+                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiah’s</span>
                     <h1 class="text-[10vw] md:text-[8vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
                         Pure & Traditional Oils
                     </h1>
@@ -62,7 +78,7 @@ class Hero extends HTMLElement {
                     <div class="reveal pointer-events-auto text-right max-w-sm" style="transition-delay: 700ms;">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">Traditional Oil. Timeless Health.</h3>
                         <p class="text-brand-dark/70 text-sm font-medium leading-relaxed">
-                            Rooted in Udangudi tradition, ramaiah Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
+                            Rooted in Udangudi tradition, Ramaiah Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
                         </p>
                     </div>
                 </div>
@@ -93,18 +109,18 @@ class Hero extends HTMLElement {
       currentW: 320,
       currentH: 416,
       currentRot: 0,
-      currentOp: 1,
-      targetX: 0,
-      targetY: 0,
-      targetW: 0,
-      targetH: 0,
+      currentOp: 0,
+      targetX: window.innerWidth / 2,
+      targetY: window.innerHeight / 2,
+      targetW: 320,
+      targetH: 416,
       targetRot: 0,
-      targetOp: 1,
+      targetOp: 0,
       progress: 0,
     };
 
     // Main Bottle
-    this.floater = this.createBottle("global-shared-bottle", "40", 1);
+    this.floater = this.createBottle("global-shared-bottle", "40", 0);
     document.body.appendChild(this.floater);
 
     // Bind scroll for target calculations
@@ -141,96 +157,79 @@ class Hero extends HTMLElement {
   }
 
   calculateTargets() {
-    if (!this.heroWrapper || !this.placeholder) return;
+    if (!this.placeholder) return;
 
     // References
     if (!this.productPlace)
       this.productPlace = document.getElementById("product-bottle-placeholder");
 
-    const heroRect = this.heroWrapper.getBoundingClientRect();
     const benefitsRect = this.placeholder.getBoundingClientRect();
-    // Recalculate the position of the product placeholder live
     const productRect = this.productPlace
       ? this.productPlace.getBoundingClientRect()
       : null;
+
+    if (!productRect) return;
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const scrollTop = window.scrollY;
 
+    // We want the animation to start when the product bottle is centered in view
+    // and end when the benefits placeholder is centered in view.
+    const productOffsetTop = scrollTop + productRect.top;
     const benefitsOffsetTop = scrollTop + benefitsRect.top;
-    const startScroll = 0;
-    const endScroll = Math.max(1, benefitsOffsetTop - windowHeight * 0.5);
-    const progress = Math.max(0, Math.min(1, scrollTop / endScroll));
+
+    const startScroll = productOffsetTop - windowHeight * 0.2;
+    const endScroll = benefitsOffsetTop - windowHeight * 1;
+
+    const range = Math.max(1, endScroll - startScroll);
+    const progress = Math.max(
+      0,
+      Math.min(1, (scrollTop - startScroll) / range),
+    );
     this.state.progress = progress;
 
     const t = (v) => (v < 0.5 ? 2 * v * v : -1 + (4 - 2 * v) * v);
     const pt = t(progress);
 
-    const screenCenterY = windowHeight * 0.45;
-    const margin = windowWidth * 0.1;
+    // Direct Path from Product to Benefits (centered drop)
+    const startX = productRect.left + productRect.width / 2;
+    const startY = productRect.top + productRect.height / 3;
+    const endX = benefitsRect.left + benefitsRect.width / 2;
+    const endY = benefitsRect.top + benefitsRect.height / 2;
 
-    // Animation Nodes: Hero -> Lifestyle -> Product -> Benefits
-    const points = [
-      {
-        x: heroRect.left + heroRect.width / 2,
-        y: heroRect.top + heroRect.height / 2,
-        stop: 0,
-      },
-      { x: windowWidth - margin, y: screenCenterY, stop: 0.2 }, // Lifestyle (Right)
-      {
-        x: productRect
-          ? productRect.left + productRect.width / 2
-          : windowWidth * 0.3,
-        y: productRect
-          ? productRect.top + productRect.height / 2
-          : screenCenterY,
-        stop: 0.7,
-      }, // Product Section (Next to Sesame)
-      {
-        x: benefitsRect.left + benefitsRect.width / 2,
-        y: benefitsRect.top + benefitsRect.height / 2,
-        stop: 1,
-      },
-    ];
+    const tx = startX + (endX - startX) * pt;
+    const ty = startY + (endY - startY) * pt;
 
-    let tx, ty;
-    if (progress <= points[1].stop) {
-      const segT = t(progress / points[1].stop);
-      tx = points[0].x + (points[1].x - points[0].x) * segT;
-      ty = points[0].y + (points[1].y - points[0].y) * segT;
-    } else if (progress <= points[2].stop) {
-      const segT = t(
-        (progress - points[1].stop) / (points[2].stop - points[1].stop),
-      );
-      tx = points[1].x + (points[2].x - points[1].x) * segT;
-      ty = points[1].y + (points[2].y - points[1].y) * segT;
-    } else {
-      const segT = t(
-        (progress - points[2].stop) / (points[3].stop - points[2].stop),
-      );
-      tx = points[2].x + (points[3].x - points[2].x) * segT;
-      ty = points[2].y + (points[3].y - points[2].y) * segT;
-    }
-
-    // --- TILT & SWAY ---
-    // Increased frequency for visible movement
-    const swayFreq = 10;
-    const swayAmp = 40 * (1 - pt);
+    // Minimal sway for a cleaner "drop" feel
+    const swayFreq = 9;
+    const swayAmp = 15 * (1 - pt) * (progress > 0 && progress < 1 ? 1 : 0);
     const sway = Math.sin(progress * Math.PI * swayFreq) * swayAmp;
-
-    // Rotation lean (Tiling) based on the derivative of sway
-    const lean = Math.cos(progress * Math.PI * swayFreq) * (swayAmp * 0.5);
 
     this.state.targetX = tx + sway;
     this.state.targetY = ty;
     this.state.targetW =
-      heroRect.width + (benefitsRect.width - heroRect.width) * pt;
+      productRect.width + (benefitsRect.width - productRect.width) * pt;
     this.state.targetH =
-      heroRect.height + (benefitsRect.height - heroRect.height) * pt;
-    this.state.targetRot = lean;
+      productRect.height + (benefitsRect.height - productRect.height) * pt;
+    this.state.targetRot = Math.sin(progress * Math.PI * 2) * 5 * (1 - pt);
 
-    this.state.targetOp = 1.0;
+    // Visibility Coordination
+    const staticBottle = document.getElementById("static-coconut-bottle");
+    const heroImage = this.heroWrapper
+      ? this.heroWrapper.querySelector("img")
+      : null;
+
+    // Restore Hero visibility
+    if (heroImage) heroImage.style.opacity = "1";
+
+    if (progress > 0) {
+      this.state.targetOp = 1.0;
+      if (staticBottle) staticBottle.style.opacity = "0";
+    } else {
+      this.state.targetOp = 0;
+      if (staticBottle) staticBottle.style.opacity = "1";
+    }
   }
 
   animate() {
