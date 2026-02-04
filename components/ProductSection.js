@@ -52,7 +52,7 @@ class ProductSection extends HTMLElement {
         <section id="product-section" class="relative w-full py-12 md:py-24 bg-brand-bg overflow-hidden min-h-screen">
             <div class="relative h-[40vh] md:h-[60vh] flex flex-col items-center justify-center pt-10 md:pt-0">
                 
-                <h2 id="product-title" class="text-[15vw] font-serif font-bold text-brand-dark leading-none relative z-0 parallax-target">
+                <h2 id="product-title" class="text-[11vw] sm:text-[14vw] font-serif font-bold text-brand-dark leading-none relative z-0 parallax-target">
                     Products
                 </h2>
                 <!-- Rising Bottle Container -->

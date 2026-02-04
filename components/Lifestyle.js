@@ -1,7 +1,7 @@
 class Lifestyle extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <section id="about" class="py-20 px-4 md:px-6 bg-gradient-to-b from-brand-bg to-white">
+        <section id="about" class="pt-0 pb-20 md:py-24 px-4 md:px-6 bg-gradient-to-b from-brand-bg to-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-7xl md:text-9xl font-serif font-bold text-brand-dark mb-4 tracking-tighter">Ramaiah’s</h2>

@@ -46,9 +46,9 @@ class Hero extends HTMLElement {
 
             <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center">
                 <!-- Brand Text Layer -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center">
+                <div class="fixed md:absolute top-[65%] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center transition-all duration-300">
                     <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiah’s</span>
-                    <h1 class="text-[10vw] md:text-[8vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
+                    <h1 class="text-[5vw] md:text-[5vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
                         Pure & Traditional Oils
                     </h1>
                      <p class="reveal text-brand-green font-serif italic text-lg md:text-2xl mt-2" style="transition-delay: 400ms;">Pure. Cold-Pressed. Naturally Healthy.</p>
