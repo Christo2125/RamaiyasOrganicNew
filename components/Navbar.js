@@ -6,7 +6,7 @@ class Navbar extends HTMLElement {
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <a href="index.html" class="h-10 w-auto text-brand-green flex items-center justify-center">
-                        <img src="./public/images/logo.jpg" alt="Ramaiah Organic Logo" class="h-40 w-auto object-contain rounded-lg pt-4">
+                        <img src="./public/images/logo.jpg" alt="Ramaiah Organic Logo" class="h-40  w-auto object-contain rounded-lg pt-4 pb-2">
                     </a>
                 </div>
 

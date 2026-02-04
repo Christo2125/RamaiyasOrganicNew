@@ -24,7 +24,7 @@ class Benefits extends HTMLElement {
                     </div>
 
                     <!-- Benefit Pills -->
-                    <div class="reveal absolute top-[5%] md:top-[20%] left-0 md:left-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 200ms;">
+                    <div class="reveal absolute top-[2%] left-2 md:top-[20%] md:left-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 200ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
                             <i data-lucide="leaf" class="w-4.5 h-4.5"></i>
                         </span>
@@ -33,7 +33,7 @@ class Benefits extends HTMLElement {
                             <p class="text-xs md:text-sm font-bold text-brand-dark">100% Natural</p>
                         </div>
                     </div>
-                    <div class="reveal absolute top-[10%] md:top-[25%] right-0 md:right-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 300ms;">
+                    <div class="reveal absolute top-[15%] right-2 md:top-[25%] md:right-10 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 300ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
                             <i data-lucide="cog" class="w-4.5 h-4.5"></i>
                         </span>
@@ -42,7 +42,7 @@ class Benefits extends HTMLElement {
                             <p class="text-xs md:text-sm font-bold text-brand-dark">Cold-Pressed (Marachekku)</p>
                         </div>
                     </div>
-                    <div class="reveal absolute bottom-[5%] md:bottom-[20%] left-0 md:left-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 400ms;">
+                    <div class="reveal absolute bottom-[15%] left-2 md:bottom-[20%] md:left-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 400ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
                             <i data-lucide="shield-check" class="w-4.5 h-4.5"></i>
                         </span>
@@ -51,7 +51,7 @@ class Benefits extends HTMLElement {
                             <p class="text-xs md:text-sm font-bold text-brand-dark">No Chemicals / No Preservatives</p>
                         </div>
                     </div>
-                    <div class="reveal absolute bottom-[10%] md:bottom-[15%] right-0 md:right-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 500ms;">
+                    <div class="reveal absolute bottom-[2%] right-2 md:bottom-[15%] md:right-20 bg-gray-200/80 backdrop-blur-sm pr-6 pl-2 py-2 rounded-full flex items-center gap-3 shadow-sm border border-white" style="transition-delay: 500ms;">
                         <span class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark">
                             <i data-lucide="utensils" class="w-4.5 h-4.5"></i>
                         </span>

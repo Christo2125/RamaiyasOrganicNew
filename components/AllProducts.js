@@ -115,8 +115,13 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full transition-transform duration-300 group-hover:-translate-y-1">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Udangudi Karupathi</h3>
-                            <p class="text-rose-700/80 font-serif text-sm italic mb-3">Palm Jaggery / உடன்குடி கருப்பட்டி</p>
-                            <p class="text-gray-600 text-xs mb-6 line-clamp-2 opacity-80">Authentic palm jaggery from Udangudi.</p>
+                            <p class="text-rose-700/80 font-serif text-sm italic mb-2">Palm Jaggery / உடன்குடி கருப்பட்டி</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs line-clamp-2 opacity-80">Traditional palm jaggery from Udangudi palm juice. Extracted using age-old methods...</p>
+                                <div class="tooltip-text">
+                                    Traditional palm jaggery from Udangudi palm juice. Extracted using age-old methods, rich in iron and minerals, acting as a natural detoxifier for the body.
+                                </div>
+                            </div>
                             <button class="w-full bg-white border border-rose-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
                         </div>
                     </a>
@@ -128,8 +133,13 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full transition-transform duration-300 group-hover:-translate-y-1">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Panam Kalkandu</h3>
-                            <p class="text-sky-700/80 font-serif text-sm italic mb-3">Palm Candy / பனங்கற்கண்டு</p>
-                            <p class="text-gray-600 text-xs mb-6 line-clamp-2 opacity-80">Natural crystal sugar made from palmyra juice.</p>
+                            <p class="text-sky-700/80 font-serif text-sm italic mb-2">Palm Candy / பனங்கற்கண்டு</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs line-clamp-2 opacity-80">Natural crystal sugar made from palmyra juice. Known for its cooling properties...</p>
+                                <div class="tooltip-text">
+                                    Natural crystal sugar made from palmyra juice. Known for its cooling properties and effectiveness in relieving cough and respiratory issues.
+                                </div>
+                            </div>
                             <button class="w-full bg-white border border-sky-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
                         </div>
                     </a>
@@ -141,8 +151,13 @@ class AllProducts extends HTMLElement {
                         </div>
                         <div class="text-center w-full transition-transform duration-300 group-hover:-translate-y-1">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Nattu Sakkarai</h3>
-                            <p class="text-orange-700/80 font-serif text-sm italic mb-3">Country Sugar / நாட்டு சக்கரை</p>
-                            <p class="text-gray-600 text-xs mb-6 line-clamp-2 opacity-80">Organic unrefined cane sugar.</p>
+                            <p class="text-orange-700/80 font-serif text-sm italic mb-2">Country Sugar / நாட்டு சக்கரை</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs line-clamp-2 opacity-80">Organic unrefined cane sugar, prepared without any chemical processing...</p>
+                                <div class="tooltip-text">
+                                    Organic unrefined cane sugar, prepared without any chemical processing. Retains all natural minerals and acts as a healthy alternative to white sugar.
+                                </div>
+                            </div>
                             <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
                         </div>
                     </a>
@@ -156,6 +171,12 @@ class AllProducts extends HTMLElement {
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Forest Honey</h3>
                             <p class="text-yellow-800/80 font-serif text-sm italic mb-2">Wild Honey / மலைத்தேன்</p>
                             <p class="text-xs font-bold text-brand-dark mb-4 bg-yellow-200/40 py-1 px-3 rounded-full inline-block">Available in 1kg , 1/2 kg , 1/4 kg</p>
+                            <div class="tooltip-container mb-6">
+                                <p class="text-gray-600 text-xs line-clamp-2 opacity-80">100% pure wild honey collected from natural forest hives. Unprocessed and nutrient-rich...</p>
+                                <div class="tooltip-text">
+                                    100% pure wild honey collected from natural forest hives. Unprocessed and nutrient-rich, offering authentic taste and numerous health benefits.
+                                </div>
+                            </div>
                             <button class="w-full bg-white border border-yellow-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
                         </div>
                     </a>

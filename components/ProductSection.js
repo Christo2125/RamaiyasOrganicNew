@@ -50,13 +50,13 @@ class ProductSection extends HTMLElement {
             }
         </style>
         <section id="product-section" class="relative w-full py-12 md:py-24 bg-brand-bg overflow-hidden min-h-screen">
-            <div class="relative h-[60vh] flex flex-col items-center justify-center">
+            <div class="relative h-[40vh] md:h-[60vh] flex flex-col items-center justify-center pt-10 md:pt-0">
                 
                 <h2 id="product-title" class="text-[15vw] font-serif font-bold text-brand-dark leading-none relative z-0 parallax-target">
                     Products
                 </h2>
                 <!-- Rising Bottle Container -->
-                <div id="product-bottle" class="absolute z-20 bottom-10 parallax-target flex items-end justify-center gap-12">
+                <div id="product-bottle" class="absolute z-20 bottom-44 md:bottom-10 parallax-target flex items-end justify-center gap-12">
                     <!-- Sesame Bottle -->
                     <div class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float">
                         <img 

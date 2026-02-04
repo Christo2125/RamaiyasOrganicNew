@@ -16,8 +16,14 @@ class Hero extends HTMLElement {
             .decoration-floating {
                 animation: float-decoration 6s ease-in-out infinite;
             }
+            @media (max-height: 800px) {
+                .hero-section {
+                    min-height: 1000px;
+                    transform: translateY(-140px);
+                }
+            }
         </style>
-        <section class="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
+        <section class="hero-section relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
             <!-- Background - Leafy Texture with Fade -->
             <div class="absolute inset-0 z-0">
                 <img 
@@ -28,7 +34,8 @@ class Hero extends HTMLElement {
                 <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
                 
                 <!-- Decorative Floating Bottle Behind Content -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[30vw] max-w-[400px] max-h-[700px] z-0 opacity-90 decoration-floating pointer-events-none">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[416px] md:w-[450px] md:h-[516px] z-0 opacity-90 decoration-floating pointer-events-none">
+
                     <img 
                         src="./public/images/oilBottle1.png" 
                         alt="Decorative Bottle" 
@@ -52,7 +59,7 @@ class Hero extends HTMLElement {
                     <!-- High Quality Product Representation -->
                     <div id="bottle-parallax-wrapper" class="relative group">
                         <!-- ID used for initial positioning -->
-                        <div id="hero-product" class="w-64 h-80 md:w-80 md:h-[26rem] relative flex items-center justify-center">
+                        <div id="hero-product" class="w-[350px] h-[416px] md:w-[450px] md:h-[516px] relative flex items-center justify-center">
                             <!-- Original Image (Will be hidden by script) -->
                              <img 
                                 src="./public/images/oilBottle1.png" 
@@ -64,7 +71,7 @@ class Hero extends HTMLElement {
                     </div>
 
                     <a href="contact.html">
-                        <button class="reveal mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
+                        <button class="reveal mt-6 md:mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
                             Buy Now
                             <span class="bg-brand-dark text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
                                 <i data-lucide="arrow-right" class="w-3 h-3"></i>
@@ -103,17 +110,21 @@ class Hero extends HTMLElement {
     if (!this.heroWrapper || !this.placeholder) return;
 
     // Initialize state
+    const isMd = window.innerWidth >= 768;
+    const initialW = isMd ? 450 : 350;
+    const initialH = isMd ? 516 : 416;
+
     this.state = {
       currentX: window.innerWidth / 2,
       currentY: window.innerHeight / 2,
-      currentW: 320,
-      currentH: 416,
+      currentW: initialW,
+      currentH: initialH,
       currentRot: 0,
       currentOp: 0,
       targetX: window.innerWidth / 2,
       targetY: window.innerHeight / 2,
-      targetW: 320,
-      targetH: 416,
+      targetW: initialW,
+      targetH: initialH,
       targetRot: 0,
       targetOp: 0,
       progress: 0,
