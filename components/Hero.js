@@ -34,7 +34,7 @@ class Hero extends HTMLElement {
                 <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
                 
                 <!-- Decorative Floating Bottle Behind Content -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[416px] md:w-[450px] md:h-[516px] z-0 opacity-90 decoration-floating pointer-events-none">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[416px] md:w-[450px] md:h-[516px] z-0 opacity-70 decoration-floating pointer-events-none">
 
                     <img 
                         src="./public/images/oilBottle1.png" 
@@ -148,11 +148,9 @@ class Hero extends HTMLElement {
   }
 
   createBottle(id, zIndex, opacity) {
-    const el = document.createElement("img");
-    el.id = id;
-    el.src = "./public/images/oilBottle1.png";
-    el.className = "filter drop-shadow-2xl";
-    Object.assign(el.style, {
+    const container = document.createElement("div");
+    container.id = id;
+    Object.assign(container.style, {
       position: "fixed",
       top: "0px",
       left: "0px",
@@ -160,11 +158,27 @@ class Hero extends HTMLElement {
       height: "0px",
       zIndex: zIndex,
       pointerEvents: "none",
-      transformOrigin: "center center",
-      willChange: "transform, top, left, width, height, opacity",
+      willChange: "transform",
       opacity: opacity,
     });
-    return el;
+
+    const floatWrapper = document.createElement("div");
+    floatWrapper.className = "animate-float-delayed";
+    floatWrapper.style.willChange = "transform";
+    floatWrapper.style.width = "100%";
+    floatWrapper.style.height = "100%";
+
+    const img = document.createElement("img");
+    img.src = "./public/images/oilBottle1.png";
+    img.className = "w-full h-full object-contain filter drop-shadow-2xl";
+
+    floatWrapper.appendChild(img);
+    container.appendChild(floatWrapper);
+
+    // Store reference to float wrapper for potential future needs
+    this.floatWrapper = floatWrapper;
+
+    return container;
   }
 
   calculateTargets() {
@@ -185,8 +199,6 @@ class Hero extends HTMLElement {
     const windowHeight = window.innerHeight;
     const scrollTop = window.scrollY;
 
-    // We want the animation to start when the product bottle is centered in view
-    // and end when the benefits placeholder is centered in view.
     const productOffsetTop = scrollTop + productRect.top;
     const benefitsOffsetTop = scrollTop + benefitsRect.top;
 
@@ -203,16 +215,14 @@ class Hero extends HTMLElement {
     const t = (v) => (v < 0.5 ? 2 * v * v : -1 + (4 - 2 * v) * v);
     const pt = t(progress);
 
-    // Direct Path from Product to Benefits (centered drop)
     const startX = productRect.left + productRect.width / 2;
-    const startY = productRect.top + productRect.height / 3;
+    const startY = productRect.top + productRect.height / 2;
     const endX = benefitsRect.left + benefitsRect.width / 2;
     const endY = benefitsRect.top + benefitsRect.height / 2;
 
     const tx = startX + (endX - startX) * pt;
     const ty = startY + (endY - startY) * pt;
 
-    // Minimal sway for a cleaner "drop" feel
     const swayFreq = 9;
     const swayAmp = 15 * (1 - pt) * (progress > 0 && progress < 1 ? 1 : 0);
     const sway = Math.sin(progress * Math.PI * swayFreq) * swayAmp;
@@ -225,13 +235,12 @@ class Hero extends HTMLElement {
       productRect.height + (benefitsRect.height - productRect.height) * pt;
     this.state.targetRot = Math.sin(progress * Math.PI * 2) * 5 * (1 - pt);
 
-    // Visibility Coordination
+    // Visibility Coordination - INSTANT HANDOVER (No Lerp)
     const staticBottle = document.getElementById("static-coconut-bottle");
     const heroImage = this.heroWrapper
       ? this.heroWrapper.querySelector("img")
       : null;
 
-    // Restore Hero visibility
     if (heroImage) heroImage.style.opacity = "1";
 
     if (progress > 0) {
@@ -246,24 +255,47 @@ class Hero extends HTMLElement {
   animate() {
     if (!this.floater) return;
 
-    // Smoothing (Lerp)
     const lerp = (start, end, factor) => start + (end - start) * factor;
     const speed = 0.12;
 
-    this.state.currentX = lerp(this.state.currentX, this.state.targetX, speed);
-    this.state.currentY = lerp(this.state.currentY, this.state.targetY, speed);
-    this.state.currentW = lerp(this.state.currentW, this.state.targetW, speed);
-    this.state.currentH = lerp(this.state.currentH, this.state.targetH, speed);
-    this.state.currentRot = lerp(
-      this.state.currentRot,
-      this.state.targetRot,
-      speed,
-    );
-    this.state.currentOp = lerp(
-      this.state.currentOp,
-      this.state.targetOp,
-      speed,
-    );
+    // If we haven't started scrolling yet, snap the current state to the target
+    // so that we takeoff from the exact right position without a "lerp jump"
+    if (this.state.progress <= 0) {
+      this.state.currentX = this.state.targetX;
+      this.state.currentY = this.state.targetY;
+      this.state.currentW = this.state.targetW;
+      this.state.currentH = this.state.targetH;
+      this.state.currentRot = this.state.targetRot;
+    } else {
+      this.state.currentX = lerp(
+        this.state.currentX,
+        this.state.targetX,
+        speed,
+      );
+      this.state.currentY = lerp(
+        this.state.currentY,
+        this.state.targetY,
+        speed,
+      );
+      this.state.currentW = lerp(
+        this.state.currentW,
+        this.state.targetW,
+        speed,
+      );
+      this.state.currentH = lerp(
+        this.state.currentH,
+        this.state.targetH,
+        speed,
+      );
+      this.state.currentRot = lerp(
+        this.state.currentRot,
+        this.state.targetRot,
+        speed,
+      );
+    }
+
+    // Opacity snap for zero fade
+    this.state.currentOp = this.state.targetOp;
 
     // Apply
     this.floater.style.width = `${this.state.currentW}px`;
@@ -272,9 +304,6 @@ class Hero extends HTMLElement {
     this.floater.style.top = `${this.state.currentY - this.state.currentH / 2}px`;
     this.floater.style.opacity = this.state.currentOp;
 
-    // Rotation Logic:
-    // - Lean while moving (currentRot)
-    // - Snap to -5deg at the very end
     let rotation = this.state.currentRot;
     if (this.state.progress > 0.98) {
       const landingT = (this.state.progress - 0.98) / 0.02;

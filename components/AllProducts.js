@@ -165,7 +165,7 @@ class AllProducts extends HTMLElement {
                      <!-- 7. Forest Honey -->
                     <a href="contact.html" class="reveal group bg-gradient-to-br from-yellow-50 to-yellow-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-yellow-200/40 transition-all duration-500 block border border-yellow-100/50">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
-                             <img src="./public/images/forestHoney.jpg" alt="Forest Honey" class="h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-500 filter drop-shadow-xl mix-blend-multiply">
+                             <img src="./public/images/forestHoney.jpg" alt="Forest Honey" class="h-full w-auto object-contain transform group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 filter drop-shadow-xl mix-blend-multiply">
                         </div>
                         <div class="text-center w-full transition-transform duration-300 group-hover:-translate-y-1">
                             <h3 class="text-xl font-bold text-brand-dark mb-2">Forest Honey</h3>

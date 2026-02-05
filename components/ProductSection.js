@@ -56,23 +56,27 @@ class ProductSection extends HTMLElement {
                     Products
                 </h2>
                 <!-- Rising Bottle Container -->
-                <div id="product-bottle" class="absolute z-20 bottom-44 md:bottom-10 parallax-target flex items-end justify-center gap-12">
+                <div id="product-bottle" class="absolute z-20 bottom-44 md:bottom-10 parallax-target flex items-end justify-center gap-12" style="will-change: transform;">
                     <!-- Sesame Bottle -->
-                    <div class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float">
-                        <img 
-                            src="./public/images/sesameBottle1.png" 
-                            alt="Ramaiah's Sesame Oil" 
-                            class="w-full h-auto object-contain filter drop-shadow-2xl"
-                        />
+                    <div class="w-56 md:w-72 hover:scale-105 transition-transform duration-500">
+                        <div class="animate-float" style="will-change: transform;">
+                            <img 
+                                src="./public/images/sesameBottle1.png" 
+                                alt="Ramaiah's Sesame Oil" 
+                                class="w-full h-auto object-contain filter drop-shadow-2xl"
+                            />
+                        </div>
                     </div>
                     <!-- Coconut Bottle (Starting point for animation) -->
-                    <div id="product-bottle-placeholder" class="w-56 md:w-72 hover:scale-105 transition-transform duration-500 animate-float-delayed">
-                        <img 
-                            id="static-coconut-bottle"
-                            src="./public/images/oilBottle1.png" 
-                            alt="Ramaiah's Coconut Oil" 
-                            class="w-full h-auto object-contain filter drop-shadow-2xl"
-                        />
+                    <div id="product-bottle-placeholder" class="w-56 md:w-72 hover:scale-105 transition-transform duration-500">
+                        <div class="animate-float-delayed" style="will-change: transform;">
+                            <img 
+                                id="static-coconut-bottle"
+                                src="./public/images/oilBottle1.png" 
+                                alt="Ramaiah's Coconut Oil" 
+                                class="w-full h-auto object-contain filter drop-shadow-2xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
