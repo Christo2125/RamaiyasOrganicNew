@@ -71,7 +71,7 @@ class Hero extends HTMLElement {
                     </div>
 
                     <a href="contact.html">
-                        <button class="reveal mt-6 md:mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
+                        <button class="reveal -mt-4 md:mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-10 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
                             Buy Now
                             <span class="bg-brand-dark text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
                                 <i data-lucide="arrow-right" class="w-3 h-3"></i>
