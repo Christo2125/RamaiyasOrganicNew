@@ -32,10 +32,10 @@ class Lifestyle extends HTMLElement {
                     </div>
                     <div class="reveal bg-[#e8ece6] rounded-3xl p-8 relative overflow-hidden flex flex-col md:flex-row items-center justify-between group gap-6" style="transition-delay: 200ms;">
                         <div class="relative z-10 flex-1">
-                            <h3 class="text-3xl font-medium text-brand-dark">The future of health starts today</h3>
-                            <p class="mt-2 text-gray-600 text-sm">A small change in your kitchen can make a lifelong difference.</p>
+                            <h3 class="text-3xl font-medium text-brand-dark">Famous Udankudi Karupathi</h3>
+                            <p class="mt-2 text-gray-600 text-sm">Experience the traditional sweetness of authentic, handmade palm jaggery from the heart of Udankudi.</p>
                         </div>
-                        <img src="./public/images/nature2.jpg" class="relative md:static w-full md:w-1/2 object-contain rounded-2xl mb-6 md:mb-0 transform translate-y-0 md:translate-y-12 group-hover:translate-y-0 transition-transform duration-500" alt="Vegetables">
+                        <img src="./public/images/UdangudiKarupathi.png" class="relative md:static w-full md:w-1/2 object-contain rounded-2xl mb-6 md:mb-0 transform translate-y-0 md:translate-y-12 group-hover:translate-y-0 transition-transform duration-500" alt="Udangudi Karupathi">
                     </div>
                     <div class="reveal bg-gradient-to-br from-[#9fab76] to-[#7d8c55] rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden gap-6" style="transition-delay: 300ms;">
                         <div class="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-20"></div>
