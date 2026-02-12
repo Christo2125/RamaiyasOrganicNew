@@ -25,22 +25,18 @@ class Hero extends HTMLElement {
         </style>
         <section class="hero-section relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
             <!-- Background - Leafy Texture with Fade -->
-            <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 z-0 ">
                 <img 
-                    src="./public/images/heroBackgroundImg.jpg" 
+                    src="./public/images/Artboard.jpeg" 
                     alt="Leaves Background" 
-                    class="w-full h-full object-cover opacity-80"
+                    class="w-full h-full object-cover opacity-100"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
                 
                 <!-- Decorative Floating Bottle Behind Content -->
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[416px] md:w-[450px] md:h-[516px] z-0 opacity-70 decoration-floating pointer-events-none">
 
-                    <img 
-                        src="./public/images/oilBottle1.png" 
-                        alt="Decorative Bottle" 
-                        class="w-full h-full object-contain"
-                    />
+                    
                 </div>
             </div>
 
