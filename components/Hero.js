@@ -8,7 +8,7 @@ class Hero extends HTMLElement {
             }
             @keyframes float-decoration {
                 0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
-                50% { transform: translate(-50%, -50%) translateY(-40px); }
+                50% { transform: translate(-50%, -50%) translateY(-15px); }
             }
             .hero-floating {
                 animation: float-hero 4s ease-in-out infinite;
@@ -22,32 +22,43 @@ class Hero extends HTMLElement {
                     transform: translateY(-140px);
                 }
             }
+            @media (min-height: 800px) and (max-width: 768px) {
+                .buy-now-btn {
+                    margin-top: -3.5rem !important;
+                }
+            }
         </style>
         <section class="hero-section relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
             <!-- Background - Leafy Texture with Fade -->
-            <div class="absolute inset-0 z-0 ">
+            <div class="absolute inset-0 z-0">
                 <img 
-                    src="./public/images/Artboard.jpeg" 
+                    src="./public/images/bannerImage.jpeg" 
                     alt="Leaves Background" 
-                    class="w-full h-full object-cover opacity-100"
+                    class="w-full h-full object-cover opacity-90"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#f4f4f0] via-white/40 to-white/10"></div>
-                
-                <!-- Decorative Floating Bottle Behind Content -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[416px] md:w-[450px] md:h-[516px] z-0 opacity-70 decoration-floating pointer-events-none">
 
-                    
+                
+                <!-- Decorative Floating Bottle - Top Layer (Overlapping) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[280px] h-[330px] md:w-[450px] md:h-[540px] z-20 decoration-floating pointer-events-none mix-blend-normal">
+                    <img 
+                        src="./public/images/heroFloatingImge.png" 
+                        alt="Decorative Bottle" 
+                        class="w-full h-full object-contain drop-shadow-2xl"
+                    />
                 </div>
             </div>
 
-            <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center">
+            <div class="relative z-10 w-full max-w-7xl mx-auto h-full flex flex-col items-center justify-center mt-20">
                 <!-- Brand Text Layer -->
-                <div class="sticky md:absolute top-[65%] md:top-1/2 inset-x-0 -translate-y-1/2 flex flex-col items-center z-0 w-full pointer-events-none select-none text-center transition-all duration-300">
-                    <span class="reveal text-brand-green font-serif italic text-xl md:text-2xl mb-2" style="transition-delay: 200ms;">Ramaiah’s</span>
-                    <h1 class="text-[5vw] md:text-[5vw] leading-tight font-serif text-brand-dark font-bold tracking-tighter opacity-90 mix-blend-multiply">
-                        Pure & Traditional Oils
+                <div class="sticky md:absolute top-[65%] md:top-1/2 inset-x-0 -translate-y-1/2 flex flex-col items-center z-10 w-full pointer-events-none select-none text-center transition-all duration-300">
+                    <span class="reveal text-brand-green font-serif italic font-semibold text-2xl md:text-3xl mb-4" style="transition-delay: 200ms;">Ramaiah’s</span>
+                    
+                    <h1 class="reveal text-[13vw] md:text-[5vw] leading-none font-serif font-bold tracking-tight drop-shadow-sm flex flex-col md:flex-row items-center gap-1 md:gap-4" style="transition-delay: 300ms;">
+                        <span class="text-brand-dark">Signature of</span>
+                        <span class="text-[#11361a]">Udangudi</span>
                     </h1>
-                     <p class="reveal text-brand-green font-serif italic text-lg md:text-2xl mt-2" style="transition-delay: 400ms;">Pure. Cold-Pressed. Naturally Healthy.</p>
+
+                     <p class="reveal text-brand-dark font-serif italic font-bold text-lg md:text-2xl mt-4 text-shadow-sm" style="transition-delay: 400ms;">Pure & Traditional Oils</p>
                 </div>
 
                 <!-- Product & CTA Layer -->
@@ -67,7 +78,7 @@ class Hero extends HTMLElement {
                     </div>
 
                     <a href="contact.html">
-                        <button class="reveal -mt-4 md:mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-10 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
+                        <button class="buy-now-btn reveal -mt-4 md:mt-10 bg-brand-yellow text-brand-dark px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-[#dbe64c] hover:shadow-2xl hover:-translate-y-10 transition-all flex items-center gap-3" style="transition-delay: 800ms;">
                             Buy Now
                             <span class="bg-brand-dark text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
                                 <i data-lucide="arrow-right" class="w-3 h-3"></i>
@@ -80,9 +91,6 @@ class Hero extends HTMLElement {
                 <div class="absolute bottom-10 w-full px-6 md:px-12 flex flex-col md:flex-row justify-end items-end pointer-events-none">
                     <div class="reveal pointer-events-auto text-right max-w-sm" style="transition-delay: 700ms;">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">Traditional Oil. Timeless Health.</h3>
-                        <p class="text-brand-dark/70 text-sm font-medium leading-relaxed">
-                            Rooted in Udangudi tradition, Ramaiah Organic brings you authentic marachekku oils made the traditional way — without chemicals, without shortcuts.
-                        </p>
                     </div>
                 </div>
             </div>

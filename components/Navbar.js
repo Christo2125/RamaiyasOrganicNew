@@ -1,7 +1,7 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-bg py-6 shadow-sm">
             <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
@@ -80,21 +80,11 @@ class Navbar extends HTMLElement {
     const navEl = this.querySelector("#navbar");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        navEl.classList.add(
-          "bg-brand-bg/90",
-          "backdrop-blur-md",
-          "py-4",
-          "shadow-sm",
-        );
-        navEl.classList.remove("bg-transparent", "py-6");
+        navEl.classList.add("py-4", "shadow-md");
+        navEl.classList.remove("py-6", "shadow-sm");
       } else {
-        navEl.classList.remove(
-          "bg-brand-bg/90",
-          "backdrop-blur-md",
-          "py-4",
-          "shadow-sm",
-        );
-        navEl.classList.add("bg-transparent", "py-6");
+        navEl.classList.remove("py-4", "shadow-md");
+        navEl.classList.add("py-6", "shadow-sm");
       }
     });
   }
