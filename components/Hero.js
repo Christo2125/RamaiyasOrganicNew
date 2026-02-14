@@ -24,9 +24,10 @@ class Hero extends HTMLElement {
             }
             @media (min-height: 800px) and (max-width: 768px) {
                 .buy-now-btn {
-                    margin-top: -3.5rem !important;
+                    margin-top: -5rem !important;
                 }
             }
+           
         </style>
         <section class="hero-section relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4f4f0]">
             <!-- Background - Leafy Texture with Fade -->
