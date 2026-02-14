@@ -58,7 +58,7 @@ class Hero extends HTMLElement {
                         <span class="text-[#11361a] ">Udangudi</span>
                     </h1>
 
-                     <p class="reveal text-brand-dark font-serif italic font-bold text-lg md:text-2xl mt-20 text-shadow-sm " style="transition-delay: 400ms;">Pure & Traditional Oils</p>
+                     <p class="reveal text-brand-dark font-serif italic font-bold text-lg md:text-2xl lg:mt-20 text-shadow-sm " style="transition-delay: 400ms;">Pure & Traditional Oils</p>
                 </div>
 
                 <!-- Product & CTA Layer -->
