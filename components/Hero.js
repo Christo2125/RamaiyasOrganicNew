@@ -55,10 +55,10 @@ class Hero extends HTMLElement {
                     
                     <h1 class="reveal text-[13vw] md:text-[5vw] leading-none font-serif font-bold tracking-tight drop-shadow-sm flex flex-col md:flex-row items-center gap-1 md:gap-4" style="transition-delay: 300ms;">
                         <span class="text-brand-dark">Signature of</span>
-                        <span class="text-[#11361a]">Udangudi</span>
+                        <span class="text-[#11361a] ">Udangudi</span>
                     </h1>
 
-                     <p class="reveal text-brand-dark font-serif italic font-bold text-lg md:text-2xl mt-4 text-shadow-sm" style="transition-delay: 400ms;">Pure & Traditional Oils</p>
+                     <p class="reveal text-brand-dark font-serif italic font-bold text-lg md:text-2xl mt-20 text-shadow-sm " style="transition-delay: 400ms;">Pure & Traditional Oils</p>
                 </div>
 
                 <!-- Product & CTA Layer -->
