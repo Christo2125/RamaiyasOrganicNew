@@ -104,7 +104,7 @@ class Contact extends HTMLElement {
                                 <textarea name="message" required rows="4" placeholder="How can we help you?" class="w-full px-6 py-4 rounded-2xl bg-brand-bg/50 border-0 focus:ring-2 focus:ring-brand-green outline-none transition-all placeholder:text-gray-400 resize-none"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full bg-brand-dark text-white py-5 rounded-2xl font-bold hover:bg-brand-green transition-all shadow-lg hover:shadow-brand-green/20 flex items-center justify-center gap-3">
+                            <button type="submit" class="w-full bg-brand-dark text-white py-5 rounded-2xl font-bold shadow-lg flex items-center justify-center gap-3 btn-animate">
                                 Send Message
                                 <i data-lucide="send" class="w-5 h-5"></i>
                             </button>

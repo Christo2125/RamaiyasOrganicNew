@@ -1,17 +1,11 @@
 class Lifestyle extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <style>
-             @media (min-height: 800px) and (max-width: 480px) {
-                .ramaiya-title {
-                    margin-top: 0.5rem !important;
-                }
-            }
-        </style>
+
         <section id="about" class="pt-0 pb-20 md:py-24 px-4 md:px-6 bg-gradient-to-b from-brand-bg to-white">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="ramaiya-title text-7xl md:text-9xl font-serif font-bold text-brand-dark mb-2 tracking-tighter">Ramaiah’s</h2>
+                <div class="text-center mb-16 reveal sm:mt-20">
+                    <h2 class="ramaiya-title mt-10 text-7xl md:text-9xl font-serif font-bold text-brand-dark mb-2 ">Ramaiah’s</h2>
                     <p class="text-brand-green font-serif text-xl md:text-2xl mb-6 italic">Natural oils made with care</p>
                     <p class="text-gray-600 font-medium max-w-3xl mx-auto mb-4">From sourcing quality seeds to slow, wood-pressed extraction, every step reflects our commitment to health, honesty, and tradition.</p>
                     <p class="text-gray-400 italic font-serif max-w-2xl mx-auto">At Ramaiah Organic, we believe true wellness begins with purity. <br class="hidden md:block"/> Our cold-pressed oils preserve natural nutrients, aroma, and taste — just as generations trusted before us.</p>
@@ -23,7 +17,7 @@ class Lifestyle extends HTMLElement {
                             <h3 class="text-3xl font-medium text-brand-dark max-w-xs">Towards a healthy and sustainable lifestyle</h3>
                             <p class="mt-3 text-gray-600 text-sm max-w-xs">We stand for conscious living. Natural food choices today create healthier families and a better tomorrow.</p>
                             <a href="contact.html">
-                                <button class="mt-6 bg-brand-yellow px-6 py-2 rounded-full text-sm font-bold hover:shadow-lg transition-all">Contact Us</button>
+                                <button class="mt-6 bg-brand-yellow px-6 py-2 rounded-full text-sm font-bold btn-animate">Contact Us</button>
                             </a>
                         </div>
                         <div class="absolute bottom-[-50px] right-[-50px] w-64 h-64 bg-brand-green rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>

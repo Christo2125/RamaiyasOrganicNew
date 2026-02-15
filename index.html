@@ -85,9 +85,13 @@
             clip-path: circle(50% at 50% 50%);
         }
 
-        /* Parallax Classes */
-        .parallax-target {
-            will-change: transform;
+        /* Button Animations */
+        .btn-animate {
+            transition: all 0.3s ease;
+        }
+        .btn-animate:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
         }
     </style>
 </head>

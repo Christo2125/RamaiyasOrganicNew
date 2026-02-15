@@ -38,13 +38,8 @@ class Hero extends HTMLElement {
 
         .hero-cta {
           background: #d9f05c;
-          transition: all 0.3s ease;
         }
 
-        .hero-cta:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-        }
 
         .hero-floating {
           animation: float-hero 4s ease-in-out infinite;
@@ -56,10 +51,10 @@ class Hero extends HTMLElement {
           
           <div class="grid md:grid-cols-2 items-center">
             <!-- LEFT COLUMN (TEXT CONTENT) -->
-            <div class="text-white pt-20 pb-0 md:py-0 pt-40">
-              <div class="flex items-center gap-4 mb-6">
+            <div class="text-white  pb-0 pt-50">
+              <div class="flex items-center gap-4 mb-6 pt-40">
                 <div class="w-12 h-[1px] bg-[#e6c26a]"></div>
-                <span class="text-sm tracking-widest text-[#e6c26a] font-serif italic">Since 1943</span>
+                <span class="text-sm  tracking-widest text-[#e6c26a] font-serif italic">Since 1943</span>
               </div>
 
               <h1 class="hero-heading text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.1] md:whitespace-nowrap">
@@ -72,7 +67,7 @@ class Hero extends HTMLElement {
               </p>
 
               <a href="contact.html">
-                <button class="hero-cta text-[#072b2e] font-bold px-10 py-4 rounded-full flex items-center gap-3 shadow-xl hover:scale-105 transition-all mb-16 md:mb-20">
+                <button class="hero-cta btn-animate text-[#072b2e] font-bold px-10 py-4 rounded-full flex items-center gap-3 shadow-xl mb-16 md:mb-20">
                   Shop Now
                   <span class="bg-[#072b2e] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">→</span>
                 </button>
@@ -81,15 +76,15 @@ class Hero extends HTMLElement {
               <!-- DESKTOP ONLY STATS -->
               <div class="hidden md:flex gap-16 text-white">
                 <div>
-                  <h3 class="text-4xl font-serif">80+</h3>
+                  <h3 class="text-4xl font-serif" data-counter="80" data-suffix="+">0</h3>
                   <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase">Years Heritage</p>
                 </div>
                 <div>
-                  <h3 class="text-4xl font-serif">100%</h3>
+                  <h3 class="text-4xl font-serif" data-counter="100" data-suffix="%">0</h3>
                   <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase">Organic</p>
                 </div>
                 <div>
-                  <h3 class="text-4xl font-serif">4th</h3>
+                  <h3 class="text-4xl font-serif" data-counter="4" data-suffix="th">0</h3>
                   <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase">Generation</p>
                 </div>
               </div>
@@ -97,7 +92,7 @@ class Hero extends HTMLElement {
 
             <!-- RIGHT COLUMN (DESKTOP IMAGE) -->
             <div class="hidden md:flex relative justify-center items-center">
-              <div id="hero-product" class="w-full max-w-[500px] relative flex items-center justify-center mt-72 ml-20 hero-floating">
+              <div id="hero-product" class="w-full max-w-[420px] relative flex items-center justify-center mt-72 pt-20 ml-20 hero-floating">
                 <img 
                   src="./public/images/heroflaotingImageRemoved.png"
                   alt="Ramaiah's Signature Products"
@@ -112,15 +107,15 @@ class Hero extends HTMLElement {
             <!-- Stacked stats -->
             <div class="flex flex-col gap-10 text-white">
               <div class="flex flex-col">
-                <h3 class="text-4xl font-serif">80+</h3>
+                <h3 class="text-4xl font-serif" data-counter="80" data-suffix="+">0</h3>
                 <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase leading-tight">Years Heritage</p>
               </div>
               <div class="flex flex-col">
-                <h3 class="text-4xl font-serif">100%</h3>
+                <h3 class="text-4xl font-serif" data-counter="100" data-suffix="%">0</h3>
                 <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase leading-tight">Organic</p>
               </div>
               <div class="flex flex-col">
-                <h3 class="text-4xl font-serif">4th</h3>
+                <h3 class="text-4xl font-serif" data-counter="4" data-suffix="th">0</h3>
                 <p class="text-[10px] tracking-[0.2em] opacity-60 mt-1 uppercase leading-tight">Generation</p>
               </div>
             </div>
@@ -139,7 +134,49 @@ class Hero extends HTMLElement {
       </section>
     `;
 
-    setTimeout(() => this.initSharedBottle(), 100);
+    setTimeout(() => {
+      this.initSharedBottle();
+      this.initCounters();
+    }, 100);
+  }
+
+  initCounters() {
+    const counters = this.querySelectorAll("[data-counter]");
+    const duration = 2000; // 2 seconds
+
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute("data-counter"));
+          const suffix = counter.getAttribute("data-suffix") || "";
+          let startTime = null;
+
+          const animateCounter = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+
+            counter.textContent = value + suffix;
+
+            if (progress < 1) {
+              requestAnimationFrame(animateCounter);
+            } else {
+              counter.textContent = target + suffix;
+            }
+          };
+
+          requestAnimationFrame(animateCounter);
+          observer.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach((counter) => observer.observe(counter));
   }
 
   /* ============================

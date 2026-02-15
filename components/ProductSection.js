@@ -105,7 +105,7 @@ class ProductSection extends HTMLElement {
                                     Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
                                 </div>
                             </div>
-                            <button class="bg-white border border-amber-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Shop Now</button>
+                            <button class="bg-white border border-amber-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                         <div class="absolute inset-0 bg-gradient-to-tr from-amber-300/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
@@ -128,14 +128,14 @@ class ProductSection extends HTMLElement {
                                     Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
                                 </div>
                             </div>
-                            <button class="bg-white border border-emerald-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Shop Now</button>
+                            <button class="bg-white border border-emerald-200/50 px-8 py-2.5 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                         <div class="absolute inset-0 bg-gradient-to-tr from-emerald-300/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
                 </div>
 
                 <div class="mt-12 text-center reveal">
-                    <a href="products.html" class="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors shadow-lg">
+                    <a href="products.html" class="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-3 rounded-full font-semibold shadow-lg btn-animate">
                         Show More Products
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>

@@ -66,7 +66,7 @@ class AllProducts extends HTMLElement {
                                     Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-amber-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-amber-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -85,7 +85,7 @@ class AllProducts extends HTMLElement {
                                     Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-emerald-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-emerald-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -104,7 +104,7 @@ class AllProducts extends HTMLElement {
                                     Traditional cold-pressed groundnut oil with natural flavour. Extracted using the traditional wood-pressed method for maximum nutrient retention.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -122,7 +122,7 @@ class AllProducts extends HTMLElement {
                                     Traditional palm jaggery from Udangudi palm juice. Extracted using age-old methods, rich in iron and minerals, acting as a natural detoxifier for the body.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-rose-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-rose-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -140,7 +140,7 @@ class AllProducts extends HTMLElement {
                                     Natural crystal sugar made from palmyra juice. Known for its cooling properties and effectiveness in relieving cough and respiratory issues.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-sky-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-sky-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -158,7 +158,7 @@ class AllProducts extends HTMLElement {
                                     Organic unrefined cane sugar, prepared without any chemical processing. Retains all natural minerals and acts as a healthy alternative to white sugar.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 
@@ -177,7 +177,7 @@ class AllProducts extends HTMLElement {
                                     100% pure wild honey collected from natural forest hives. Unprocessed and nutrient-rich, offering authentic taste and numerous health benefits.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-yellow-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent transition-all duration-300">Order Now</button>
+                            <button class="w-full bg-white border border-yellow-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
                         </div>
                     </a>
 

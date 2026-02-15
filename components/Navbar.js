@@ -20,7 +20,7 @@ class Navbar extends HTMLElement {
                 <!-- Actions -->
                 <div class="flex items-center gap-4">
                     <a href="contact.html" class="hidden md:block">
-                        <button class="bg-brand-yellow px-6 py-3 rounded-full font-semibold text-brand-dark hover:bg-yellow-300 transition-colors shadow-sm">
+                        <button class="bg-brand-yellow px-6 py-3 rounded-full font-semibold text-brand-dark shadow-sm btn-animate">
                             Contact Us
                         </button>
                     </a>
