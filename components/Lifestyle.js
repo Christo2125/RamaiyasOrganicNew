@@ -47,7 +47,7 @@ class Lifestyle extends HTMLElement {
                     <div class="reveal bg-gradient-to-br from-[#9fab76] to-[#7d8c55] rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden gap-6" style="transition-delay: 300ms;">
                         <div class="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-20"></div>
                         <div class="relative z-10 flex-1">
-                            <h3 class="text-xl md:text-4xl font-medium text-white leading-tight mb-4">
+                            <h3 class="text-3xl md:text-4xl font-medium text-white leading-tight mb-4">
                                 Balance your<br/>health, sleep,<br/>and energy
                             </h3>
                             <p class="text-white/80 text-sm max-w-xs">Traditional oils support digestion, immunity, and everyday vitality.</p>

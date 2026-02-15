@@ -261,7 +261,12 @@ class Hero extends HTMLElement {
       (benefitsRect.height - productRect.height) * progress;
 
     this.state.targetRot = Math.sin(progress * Math.PI * 2) * 5;
-    this.state.targetOp = progress > 0 ? 1 : 0;
+
+    // Unified opacity: visible if product section or benefits section is in view
+    const isInView = productRect.top < windowHeight && productRect.bottom > 0;
+    const isBenefitsInView =
+      benefitsRect.top < windowHeight && benefitsRect.bottom > 0;
+    this.state.targetOp = isInView || isBenefitsInView || progress > 0 ? 1 : 0;
   }
 
   animate() {
@@ -279,13 +284,24 @@ class Hero extends HTMLElement {
       this.state.targetRot,
       speed,
     );
+    this.state.currentOp = lerp(
+      this.state.currentOp,
+      this.state.targetOp,
+      speed,
+    );
+
+    // Add idle float effect when at home position
+    const idleFloat =
+      Math.sin(Date.now() / 1000) * 15 * (1 - this.state.progress);
 
     this.floater.style.width = `${this.state.currentW}px`;
     this.floater.style.height = `${this.state.currentH}px`;
     this.floater.style.left = `${this.state.currentX - this.state.currentW / 2}px`;
-    this.floater.style.top = `${this.state.currentY - this.state.currentH / 2}px`;
-    this.floater.style.opacity = this.state.targetOp;
+    this.floater.style.top = `${this.state.currentY - this.state.currentH / 2 + idleFloat}px`;
+    this.floater.style.opacity = this.state.currentOp;
     this.floater.style.transform = `rotate(${this.state.currentRot}deg)`;
+    this.floater.style.visibility =
+      this.state.currentOp < 0.01 ? "hidden" : "visible";
 
     this.rafId = requestAnimationFrame(() => this.animate());
   }

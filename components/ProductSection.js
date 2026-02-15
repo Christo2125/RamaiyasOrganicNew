@@ -75,6 +75,7 @@ class ProductSection extends HTMLElement {
                                 src="./public/images/oilBottle1.png" 
                                 alt="Ramaiah's Coconut Oil" 
                                 class="w-full h-auto object-contain filter drop-shadow-2xl"
+                                style="opacity: 0;"
                             />
                         </div>
                     </div>
