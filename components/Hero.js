@@ -94,7 +94,7 @@ class Hero extends HTMLElement {
             <div class="hidden md:flex relative justify-center items-center">
               <div id="hero-product" class="w-full max-w-[420px] relative flex items-center justify-center mt-72 pt-20 ml-20 hero-floating">
                 <img 
-                  src="./public/images/heroflaotingImageRemoved.png"
+                  src="./public/images/heroFloatingImge.png"
                   alt="Ramaiah's Signature Products"
                   class="w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -123,7 +123,7 @@ class Hero extends HTMLElement {
             <!-- Mobile Image wrapper -->
             <div id="hero-product-mobile" class="w-[90%] max-w-[340px] aspect-square relative flex items-center justify-center hero-floating">
               <img 
-                src="./public/images/heroflaotingImageRemoved.png"
+                src="./public/images/heroFloatingImge.png"
                 alt="Ramaiah's Signature Products"
                 class="w-full h-full object-contain drop-shadow-2xl"
               />
