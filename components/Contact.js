@@ -60,7 +60,7 @@ class Contact extends HTMLElement {
 
                     <!-- Contact Form -->
                     <div class="reveal bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-brand-green/5 border border-white" style="transition-delay: 200ms;">
-                        <form action="https://formspree.io/f/mjggkjpz" method="POST" class="space-y-6">
+                        <form action="https://formspree.io/f/xzdaaboj" method="POST" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="text-sm font-semibold text-brand-dark px-1">Full Name</label>

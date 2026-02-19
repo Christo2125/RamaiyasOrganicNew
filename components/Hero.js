@@ -28,7 +28,7 @@ class Hero extends HTMLElement {
         }
 
         .hero-highlight {
-          color: #e6c26a;
+          color: #E6C26A;
           font-style: italic;
         }
 
@@ -52,9 +52,9 @@ class Hero extends HTMLElement {
           <div class="grid md:grid-cols-2 items-center">
             <!-- LEFT COLUMN (TEXT CONTENT) -->
             <div class="text-white  pb-0 pt-50">
-              <div class="flex items-center gap-4 mb-6 pt-40">
-                <div class="w-12 h-[1px] bg-[#e6c26a]"></div>
-                <span class="text-sm  tracking-widest text-[#e6c26a] font-serif italic">Since 1943</span>
+              <div class="flex items-center gap-4 mb-6 pt-25">
+                <div class="w-12 h-[1px] bg-[#E6C26A]"></div>
+                <span class="text-sm  tracking-widest text-[#E6C26A] font-serif italic">Since 1943</span>
               </div>
 
               <h1 class="hero-heading text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.1] md:whitespace-nowrap">
@@ -66,7 +66,7 @@ class Hero extends HTMLElement {
                 our organic coconut oil and jaggery bring the soul of the coast to your kitchen.
               </p>
 
-              <a href="contact.html">
+              <a href="https://wa.me/9543811405">
                 <button class="hero-cta btn-animate text-[#072b2e] font-bold px-10 py-4 rounded-full flex items-center gap-3 shadow-xl mb-16 md:mb-20">
                   Shop Now
                   <span class="bg-[#072b2e] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">→</span>

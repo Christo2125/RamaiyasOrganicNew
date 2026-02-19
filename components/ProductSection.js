@@ -87,7 +87,7 @@ class ProductSection extends HTMLElement {
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     <!-- Sesame Oil Card -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-amber-50 to-amber-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-amber-200/40 transition-all duration-500 block border border-amber-100/50">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-amber-50 to-amber-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-amber-200/40 transition-all duration-500 block border border-amber-100/50">
                         <div class="w-40 h-56 relative z-0 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 mb-6">
                             <img 
                                 src="./public/images/sesameBottle1.png" 
@@ -110,7 +110,7 @@ class ProductSection extends HTMLElement {
                         <div class="absolute inset-0 bg-gradient-to-tr from-amber-300/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </a>
                     <!-- Coconut Oil Card -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-emerald-50 to-emerald-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-emerald-200/40 transition-all duration-500 block border border-emerald-100/50" style="transition-delay: 100ms;">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-emerald-50 to-emerald-200/60 rounded-[2.5rem] p-8 flex flex-col items-center overflow-hidden hover:shadow-2xl hover:shadow-emerald-200/40 transition-all duration-500 block border border-emerald-100/50" style="transition-delay: 100ms;">
                         <div class="w-40 h-56 relative z-0 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 mb-6">
                             <img 
                                 src="./public/images/oilBottle1.png" 

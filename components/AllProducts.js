@@ -52,7 +52,7 @@ class AllProducts extends HTMLElement {
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     
                     <!-- 1. Ramaiah's Sesame Oil -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-amber-50 to-amber-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-amber-200/40 transition-all duration-500 block border border-amber-100/50">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-amber-50 to-amber-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-amber-200/40 transition-all duration-500 block border border-amber-100/50">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/sesameoilImg.png" alt="Ramaiah's Sesame Oil" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -66,12 +66,12 @@ class AllProducts extends HTMLElement {
                                     Traditional cold-pressed gingili oil extracted using the age-old marachekku method. Rich in nutrients, natural aroma, and authentic taste, perfect for daily cooking and healthy living.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-amber-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-amber-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                     <!-- 2. Ramaiah's Coconut Oil -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-emerald-50 to-emerald-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-emerald-200/40 transition-all duration-500 block border border-emerald-100/50" style="transition-delay: 100ms;">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-emerald-50 to-emerald-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-emerald-200/40 transition-all duration-500 block border border-emerald-100/50" style="transition-delay: 100ms;">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/groundnutoilHand.png" alt="Ramaiah's Coconut Oil" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -85,12 +85,12 @@ class AllProducts extends HTMLElement {
                                     Pure marachekku coconut oil made without heat or chemicals. Preserving natural nutrients and authentic taste for your wellbeing.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-emerald-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-emerald-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                     <!-- 3. Ramaiah's Groundnut Oil -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-orange-50 to-orange-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-orange-200/40 transition-all duration-500 block border border-orange-100/50" style="transition-delay: 200ms;">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-orange-50 to-orange-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-orange-200/40 transition-all duration-500 block border border-orange-100/50" style="transition-delay: 200ms;">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/groundnutImage.png" alt="Ramaiah's Groundnut Oil" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -104,12 +104,12 @@ class AllProducts extends HTMLElement {
                                     Traditional cold-pressed groundnut oil with natural flavour. Extracted using the traditional wood-pressed method for maximum nutrient retention.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                     <!-- 4. Udangudi Karupathi -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-rose-50 to-rose-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-rose-200/40 transition-all duration-500 block border border-rose-100/50">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-rose-50 to-rose-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-rose-200/40 transition-all duration-500 block border border-rose-100/50">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/UdangudiKarupathi.png" alt="Udangudi Karupathi" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -122,12 +122,12 @@ class AllProducts extends HTMLElement {
                                     Traditional palm jaggery from Udangudi palm juice. Extracted using age-old methods, rich in iron and minerals, acting as a natural detoxifier for the body.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-rose-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-rose-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                     <!-- 5. Panam Kalkandu -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-sky-50 to-sky-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-sky-200/40 transition-all duration-500 block border border-sky-100/50" style="transition-delay: 100ms;">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-sky-50 to-sky-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-sky-200/40 transition-all duration-500 block border border-sky-100/50" style="transition-delay: 100ms;">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/PanamKalkandu.png" alt="Panam Kalkandu" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -140,12 +140,12 @@ class AllProducts extends HTMLElement {
                                     Natural crystal sugar made from palmyra juice. Known for its cooling properties and effectiveness in relieving cough and respiratory issues.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-sky-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-sky-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                     <!-- 6. Nattu Sakkarai -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-orange-50 to-orange-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-orange-200/40 transition-all duration-500 block border border-orange-100/50" style="transition-delay: 200ms;">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-orange-50 to-orange-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-orange-200/40 transition-all duration-500 block border border-orange-100/50" style="transition-delay: 200ms;">
                          <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/NattuSarkarai.png" alt="Nattu Sakkarai" class="w-full h-full object-contain transform group-hover:scale-110 group-hover:rotate-2 transition-transform duration-500 filter drop-shadow-xl">
                         </div>
@@ -158,12 +158,12 @@ class AllProducts extends HTMLElement {
                                     Organic unrefined cane sugar, prepared without any chemical processing. Retains all natural minerals and acts as a healthy alternative to white sugar.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-orange-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
                      <!-- 7. Forest Honey -->
-                    <a href="contact.html" class="reveal group bg-gradient-to-br from-yellow-50 to-yellow-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-yellow-200/40 transition-all duration-500 block border border-yellow-100/50">
+                    <a href="https://wa.me/9543811405" class="reveal group bg-gradient-to-br from-yellow-50 to-yellow-200/60 rounded-[2.5rem] p-6 flex flex-col items-center hover:shadow-2xl hover:shadow-yellow-200/40 transition-all duration-500 block border border-yellow-100/50">
                         <div class="w-full aspect-[4/5] relative mb-6 flex items-center justify-center overflow-hidden rounded-3xl bg-white/60 transform group-hover:scale-[1.02] transition-transform duration-500">
                              <img src="./public/images/forestHoney.jpg" alt="Forest Honey" class="h-full w-auto object-contain transform group-hover:scale-110 group-hover:-rotate-2 transition-transform duration-500 filter drop-shadow-xl mix-blend-multiply">
                         </div>
@@ -177,7 +177,7 @@ class AllProducts extends HTMLElement {
                                     100% pure wild honey collected from natural forest hives. Unprocessed and nutrient-rich, offering authentic taste and numerous health benefits.
                                 </div>
                             </div>
-                            <button class="w-full bg-white border border-yellow-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Order Now</button>
+                            <button class="w-full bg-white border border-yellow-200/50 py-3 rounded-full text-sm font-bold shadow-sm group-hover:bg-brand-yellow group-hover:border-transparent btn-animate">Shop Now</button>
                         </div>
                     </a>
 
